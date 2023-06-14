@@ -30,7 +30,7 @@
                                 <div class="invoice-title">
                                     
                                     <h3>
-                                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo" height="24"/> Easy Shopping Mall
+                                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo" height="24"/> Shopping Demo
                                     </h3>
                                 </div>
                                 <hr>
