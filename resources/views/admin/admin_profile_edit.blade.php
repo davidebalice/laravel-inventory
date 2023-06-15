@@ -5,21 +5,13 @@
 <div class="page-content">
     <div class="container-fluid">
 
-       
-
-
-
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
 
                         <h4 class="card-title">Edit profile</h4>
-                        
-                        <!--
-                        <p class="card-title-desc">Here are examples of <code class="highlighter-rouge">.form-control</code> applied to each
-                            textual HTML5 <code class="highlighter-rouge">&lt;input&gt;</code> <code class="highlighter-rouge">type</code>.</p>
-                        -->
+                    
                         
                         <form id="frm_profile" method="post" action="/store/profile" enctype="multipart/form-data">
                             @csrf
@@ -110,7 +102,7 @@
 
                     </div>
                 </div>
-            </div> <!-- end col -->
+            </div>
         </div>
     </div>
 </div>

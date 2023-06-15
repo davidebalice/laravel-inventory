@@ -3,38 +3,30 @@
 
 <div class="page-content">
     <div class="container-fluid">
-    
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                     <h4 class="mb-sm-0">Dashboard</h4>
-
-                    <div class="page-title-right">
-                        <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
-                    </div>
-
                 </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-xl-6 col-md-6">
-                <div class="card dashBoxHeight">
+                <div class="card dashBoxHeight bgDash">
                     <div class="card-body text-center">
                         <div class="d-flex">
                             <div class="avatar-sm">
-                                <img src="{{ asset('logo/logo.png') }}" class="dashLogo mt-2">
+                                <img src="{{ asset('logo/logo-white.png') }}" class="dashLogo mt-2">
                             </div>
                             <div class="flex-grow-1">
-                                <h1 class="mb-2 bold mt-3">Demo</h1>
+                                <h1 class="mb-2 bold mt-3 white">Demo</h1>
                                 <h3 class="mt-2">
-                                    <span class="font-size-19">
+                                    <span class="font-size-19 white">
                                         Inventory Management System
                                     </span>
                                 </h3>
-                                <p class="font-size-16">
+                                <p class="font-size-16 white">
                                     Demo of an inventory management software, includes basic functionality, 
                                     <br />
                                     such as customer, 
@@ -48,18 +40,19 @@
             </div>
 
             <div class="col-xl-6 col-md-6">
-                <div class="card dashBoxHeight">
+                <div class="card dashBoxHeight bgDash2">
                     <div class="card-body">
                         <div class="d-flex">
-                            <div class="flex-grow-1">
-                                <p class="text-truncate font-size-14 mb-2">Unique Visitors</p>
-                                <h4 class="mb-2">29670</h4>
-                                <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>11.7%</span>from previous period</p>
-                            </div>
-                            <div class="avatar-sm">
-                                <span class="avatar-title bg-light text-success rounded-3">
-                                    <i class="mdi mdi-currency-btc font-size-24"></i>  
-                                </span>
+                            <div class="flex-grow-1 text-center">
+                                <p class="font-size-25 bold red mb-2 mt-4">
+                                    Important
+                                </p>
+                                <p class="mb-0"><span class="font-size-23 me-2">
+                                    Software is in <b>demo mode</b>
+                                </p>
+                                <p class="mb-0"><span class="font-size-21 me-2">
+                                    Crud operations is not allowed
+                                </p>
                             </div>
                         </div>                                              
                     </div>
@@ -73,9 +66,8 @@
                     <div class="card-body">
                         <div class="d-flex">
                             <div class="flex-grow-1">
-                                <p class="text-truncate font-size-14 mb-2">Total Sales</p>
-                                <h4 class="mb-2">1452</h4>
-                                <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>9.23%</span>from previous period</p>
+                                <p class="text-truncate font-size-14 mb-2">Products</p>
+                                <h4 class="mb-2">{{$totalProduct}}</h4>
                             </div>
                             <div class="avatar-sm">
                                 <span class="avatar-title bg-light text-primary rounded-3">
@@ -92,28 +84,8 @@
                     <div class="card-body">
                         <div class="d-flex">
                             <div class="flex-grow-1">
-                                <p class="text-truncate font-size-14 mb-2">New Orders</p>
-                                <h4 class="mb-2">938</h4>
-                                <p class="text-muted mb-0"><span class="text-danger fw-bold font-size-12 me-2"><i class="ri-arrow-right-down-line me-1 align-middle"></i>1.09%</span>from previous period</p>
-                            </div>
-                            <div class="avatar-sm">
-                                <span class="avatar-title bg-light text-success rounded-3">
-                                    <i class="mdi mdi-currency-usd font-size-24"></i>  
-                                </span>
-                            </div>
-                        </div>                                              
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex">
-                            <div class="flex-grow-1">
-                                <p class="text-truncate font-size-14 mb-2">New Users</p>
-                                <h4 class="mb-2">8246</h4>
-                                <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>16.2%</span>from previous period</p>
+                                <p class="text-truncate font-size-14 mb-2">Users</p>
+                                <h4 class="mb-2">{{$totalUser}}</h4>
                             </div>
                             <div class="avatar-sm">
                                 <span class="avatar-title bg-light text-primary rounded-3">
@@ -130,13 +102,30 @@
                     <div class="card-body">
                         <div class="d-flex">
                             <div class="flex-grow-1">
-                                <p class="text-truncate font-size-14 mb-2">Unique Visitors</p>
-                                <h4 class="mb-2">29670</h4>
-                                <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>11.7%</span>from previous period</p>
+                                <p class="text-truncate font-size-14 mb-2">Suppliers</p>
+                                <h4 class="mb-2">{{$totalSupplier}}</h4>
+                            </div>
+                            <div class="avatar-sm">
+                                <span class="avatar-title bg-light text-primary rounded-3">
+                                    <i class="ri-user-3-line font-size-24"></i>  
+                                </span>
+                            </div>
+                        </div>                                              
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="flex-grow-1">
+                                <p class="text-truncate font-size-14 mb-2">Customers</p>
+                                <h4 class="mb-2">{{$totalCustomer}}</h4>
                             </div>
                             <div class="avatar-sm">
                                 <span class="avatar-title bg-light text-success rounded-3">
-                                    <i class="mdi mdi-currency-btc font-size-24"></i>  
+                                    <i class="mdi mdi-currency-usd font-size-24"></i>  
                                 </span>
                             </div>
                         </div>                                              

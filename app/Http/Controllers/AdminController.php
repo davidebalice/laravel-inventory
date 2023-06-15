@@ -2,6 +2,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Product;
+use App\Models\Supplier;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -26,12 +29,20 @@ class AdminController extends Controller
         return redirect('/login')->with($notification);;
     }
 
+    public function Dashboard(){
+        $totalUser = User::count();
+        $totalProduct = Product::count();
+        $totalSupplier = Supplier::count();
+        $totalCustomer = Customer::count();
+        return view('admin.index',compact('totalUser','totalProduct','totalSupplier','totalCustomer'));
+    }
+
     public function Profile(){
         $id = Auth::user()->id;
         $adminData = User::find($id);
         return view('admin.admin_profile_view',compact('adminData'));
     }
-
+        
     public function EditProfile(){
         $id = Auth::user()->id;
         $editData = User::find($id);

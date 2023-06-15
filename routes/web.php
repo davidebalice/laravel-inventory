@@ -19,9 +19,10 @@ Route::middleware(['auth'])->group(function (){
     Route::get('/', function () {
         return view('admin.index');
     });
-    Route::get('/dashboard', function () {
-        return view('admin.index');
-    })->middleware(['auth', 'verified'])->name('dashboard');
+    Route::controller(AdminController::class)->group(function(){
+        Route::get('/dashboard','Dashboard')->middleware(['auth', 'verified'])->name('dashboard');
+    });
+
     Route::controller(AdminController::class)->group(function(){
         Route::get('/admin/logout', 'destroy')->name('admin.logout');
         Route::get('/admin/profile', 'Profile')->name('admin.profile');
