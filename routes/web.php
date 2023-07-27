@@ -16,8 +16,8 @@ use App\Http\Controllers\LangController;
 Route::get('lang/change', [LangController::class, 'change'])->name('changeLang');
 
 Route::middleware(['auth'])->group(function (){
-    Route::get('/', function () {
-        return view('admin.index');
+    Route::controller(AdminController::class)->group(function(){
+        Route::get('/','Dashboard')->middleware(['auth', 'verified'])->name('dashboard');
     });
     Route::controller(AdminController::class)->group(function(){
         Route::get('/dashboard','Dashboard')->middleware(['auth', 'verified'])->name('dashboard');
