@@ -13,7 +13,7 @@ use App\Http\Controllers\Pos\InvoiceController;
 use App\Http\Controllers\Pos\StockController;
 use App\Http\Controllers\LangController;
 
-Route::get('lang/change', [LangController::class, 'change'])->name('changeLang');
+Route::get('lang/change/{lang}', [LangController::class, 'change'])->name('changeLang');
 
 Route::middleware(['auth'])->group(function (){
     Route::controller(AdminController::class)->group(function(){

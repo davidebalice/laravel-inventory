@@ -34,7 +34,7 @@
                 </div>
             </form>
 
-            @include('admin.body.nav')
+            
         </div>
 
         <div class="d-flex">
@@ -66,25 +66,12 @@
                     <img class="" src="{{ asset('backend/assets/images/flags/us.jpg') }}" alt="Header Language" height="16">
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
-        
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <img src="{{ asset('backend/assets/images/flags/spain.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                    <p>Lingua corrente: {{ app()->getLocale() }}</p>
+                    <a href="lang/change/en" class="dropdown-item notify-item">
+                        <img src="{{ asset('backend/assets/images/flags/en.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
                     </a>
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <img src="{{ asset('backend/assets/images/flags/germany.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <a href="lang/change/it" class="dropdown-item notify-item">
                         <img src="{{ asset('backend/assets/images/flags/italy.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <img src="{{ asset('backend/assets/images/flags/russia.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
                     </a>
                 </div>
             </div>

@@ -45,7 +45,7 @@
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
 
-                                <!-- Email Address 
+                                <!-- Email Address  -->
                                 <div>
                                     <x-input-label for="email" :value="__('Email')" />
 
@@ -53,9 +53,9 @@
 
                                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                 </div>
-                                -->
+                                
 
-                                <!-- Username  -->
+                                <!-- Username 
                                 <div>
                                     <x-input-label for="username" :value="__('Username')" />
 
@@ -63,7 +63,8 @@
 
                                     <x-input-error :messages="$errors->get('username')" class="mt-2" />
                                 </div>
-                            
+                                -->
+
                                 <!-- Password -->
                                 <div class="mt-4">
                                     <x-input-label for="password" :value="__('Password')" />

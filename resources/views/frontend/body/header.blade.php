@@ -33,7 +33,7 @@
                                     <li class="{{($route=='portfolio') ? 'active' : ''}}">
                                         <a href="{{ route('portfolio') }}">
                                             Portfolio
-                                        </a>                                    
+                                        </a>
                                     </li>
 
                                     <li class="{{($route=='home.blog') ? 'active' : ''}}">
