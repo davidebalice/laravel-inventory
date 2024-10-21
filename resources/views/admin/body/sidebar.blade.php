@@ -1,12 +1,11 @@
   <div class="vertical-menu">
     <div data-simplebar class="h-100">
-        <div id="sidebar-menu">
+        <div id="sidebar-menu" style="visibility: hidden">
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li class="menu-title">Menu</li>
                 <li>
                     <a href="/dashboard" class="waves-effect">
                         <i class="ri-dashboard-line"></i>
-                          <!--<span class="badge rounded-pill bg-success float-end">3</span>-->
                         <span>Dashboard</span>
                     </a>
                 </li>
@@ -14,10 +13,10 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-hotel-fill"></i>
-                        <span>Suppliers</span>
+                        <span>{{ __('messages.Suppliers') }}</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route ('suppliers') }}">Suppliers</a></li>
+                        <li><a href="{{ route ('suppliers') }}">{{ __('messages.Suppliers') }}</a></li>
                         <li><a href="{{ route ('supplier.add') }}">Add supplier</a></li>
                     </ul>
                 </li>
@@ -50,10 +49,10 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="mdi mdi-menu"></i>
-                        <span>Category</span>
+                        <span>{{ __('messages.Categories') }}</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route ('categories') }}">Category</a></li>
+                        <li><a href="{{ route ('categories') }}">{{ __('messages.Categories') }}</a></li>
                         <li><a href="{{ route ('category.add') }}">Add category</a></li>
                     </ul>
                 </li>
@@ -61,10 +60,10 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="fas fa-boxes"></i>
-                        <span>Products</span>
+                        <span>{{ __('messages.Products') }}</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route ('products') }}">Products</a></li>
+                        <li><a href="{{ route ('products') }}">{{ __('messages.Products') }}</a></li>
                         <li><a href="{{ route ('product.add') }}">Add product</a></li>
                     </ul>
                 </li>
@@ -117,3 +116,9 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById('sidebar-menu').style.visibility = 'visible';
+    });
+</script>

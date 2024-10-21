@@ -11,8 +11,8 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <a href="{{ route('categories')}}" class="btn btn-primary waves-effect waves-light primary_bg">            
-                            <i class="fas fa-arrow-alt-circle-left"></i>               
+                        <a href="{{ route('categories')}}" class="btn btn-primary waves-effect waves-light primary_bg">
+                            <i class="fas fa-arrow-alt-circle-left"></i>
                             &nbsp;Back
                         </a>
 

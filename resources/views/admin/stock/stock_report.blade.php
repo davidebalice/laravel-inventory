@@ -22,8 +22,8 @@
                             <tr>
                                 <th>Supplier</th>
                                 <th>Unit</th>
-                                <th>Category</th> 
-                                <th>Product Name</th> 
+                                <th>{{ __('messages.Category') }}</th> 
+                                <th>{{ __('messages.Product') }}</th> 
                                 <th>In Qty</th> 
                                 <th>Out Qty </th>  
                                 <th>Stock </th>

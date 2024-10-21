@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Products</h4>
+                    <h4 class="mb-sm-0">{{ __('messages.Products') }}</h4>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
                         <a href="{{route('product.add')}}" class="btn btn-dark  waves-effect waves-light mb-3 primary_bg">
                             <i class="fas fa-plus-circle"> </i>
                             &nbsp;
-                            Product
+                            {{ __('messages.Product') }}
                         </a>
 
                         <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
@@ -39,7 +39,7 @@
                                         <tr role="row">
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 80px;" aria-label="Position: activate to sort column ascending">Image</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 250px;" aria-label="Position: activate to sort column ascending">Name</th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Category</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Category') }}</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Supplier</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">Unit</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">Actions</th>

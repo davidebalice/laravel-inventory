@@ -41,8 +41,8 @@
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Date</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">QTY</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Supplier</th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Category</th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">Product name</th>                                            
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Category') }}</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">{{ __('messages.Product') }}</th>                                            
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">Status</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">Actions</th>
                                         </tr>
@@ -66,7 +66,7 @@
                                                     $class_row="odd";
                                                 @endphp
                                             @endif
-                                            <tr class="{{ $class_row }}">                         
+                                            <tr class="{{ $class_row }}">
                                                 <td>{{ $item->purchase_no ?? 'None'}}</td>
                                                 <td>{{ date('d/m/Y',strtotime($item->date)) ?? 'None'}}</td>
                                                 <td>{{ $item->buying_qty ?? 'None'}}</td>
@@ -79,7 +79,7 @@
                                                     @elseif ($item->status == 1)
                                                     <span class="btn btn-success">Approved</span>
                                                     @endif
-                                                </td>                                                                                   
+                                                </td>
                                                 <td>
                                                     {{--
                                                     <a href="{{ route('purchase.edit',$item->id) }}" class="btn btn-info sm" title="Edit">

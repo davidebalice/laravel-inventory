@@ -50,20 +50,20 @@
 
                             <div class="col-md-4 col-lg-3">
                                 <label for="category_id" class="col-form-label">
-                                    Category
+                                    {{ __('messages.Category') }}
                                 </label>
                                 <select class="form-select select2" name="category_id" id="category_id" >
-                                    <option value=""> - Category - </option>
+                                    <option value=""> - {{ __('messages.Category') }} - </option>
                                     
                                 </select>
                             </div>  
 
                             <div class="col-md-4 col-lg-3">  
                                 <label for="product_id" class="col-form-label">
-                                    Product
+                                    {{ __('messages.Product') }}
                                 </label>
                                 <select class="form-select select2" name="product_id" id="product_id" >
-                                    <option value=""> - Category - </option>
+                                    <option value=""> - {{ __('messages.Category') }} - </option>
                                     
                                 </select>
                             </div>  
@@ -93,8 +93,8 @@
                             <table class="table-sm table-bordered" width="100%" style="border-color: #ddd">
                                 <thead>
                                     <tr>
-                                        <th style="width:18%">Category</th>
-                                        <th style="width:18%">Product</th>
+                                        <th style="width:18%">{{ __('messages.Category') }}</th>
+                                        <th style="width:18%">{{ __('messages.Product') }}</th>
                                         <th style="width:10%">Qty / Kg</th>
                                         <th style="width:10%">Unit price</th>
                                         <th style="width:18%">Description</th>

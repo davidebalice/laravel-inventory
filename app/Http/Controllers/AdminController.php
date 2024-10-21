@@ -5,6 +5,7 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\Supplier;
 use App\Models\Customer;
+use App\Models\Purchase;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -34,7 +35,8 @@ class AdminController extends Controller
         $totalProduct = Product::count();
         $totalSupplier = Supplier::count();
         $totalCustomer = Customer::count();
-        return view('admin.index',compact('totalUser','totalProduct','totalSupplier','totalCustomer'));
+        $purchases = Purchase::latest()->take(10)->get();
+        return view('admin.index',compact('totalUser','totalProduct','totalSupplier','totalCustomer','purchases'));
     }
 
     public function Profile(){

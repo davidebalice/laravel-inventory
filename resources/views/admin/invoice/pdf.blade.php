@@ -108,8 +108,8 @@
                                                 <table class="table">
                                                     <thead>
                                                     <tr>
-                                                        <td class="text-center"><strong>Category</strong></td>
-                                                        <td class="text-center"><strong>Product Name</strong>
+                                                        <td class="text-center"><strong>{{ __('messages.Category') }}</strong></td>
+                                                        <td class="text-center"><strong>{{ __('messages.Product') }}</strong>
                                                         </td>
                                                         <td class="text-center"><strong>Current Stock</strong>
                                                         </td>

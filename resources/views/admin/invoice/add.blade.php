@@ -8,8 +8,8 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <a href="{{ route('invoices')}}" class="btn btn-primary waves-effect waves-light primary_bg">            
-                            <i class="fas fa-arrow-alt-circle-left"></i>               
+                        <a href="{{ route('invoices')}}" class="btn btn-primary waves-effect waves-light primary_bg">
+                            <i class="fas fa-arrow-alt-circle-left"></i>
                             &nbsp;Back
                         </a>
 
@@ -77,7 +77,7 @@
                                     Product
                                 </label>
                                 <select class="form-select select2" name="product_id" id="product_id" >
-                                    <option value=""> - Category - </option>
+                                    <option value=""> - {{ __('messages.Category') }} - </option>
                                     
                                 </select>
                             </div>  
@@ -90,8 +90,8 @@
                             <table class="table-sm table-bordered" width="100%" style="border-color: #ddd">
                                 <thead>
                                     <tr>
-                                        <th style="width:24%">Category</th>
-                                        <th style="width:24%">Product</th>
+                                        <th style="width:24%">{{ __('messages.Category') }}</th>
+                                        <th style="width:24%">{{ __('messages.Product') }}</th>
                                         <th style="width:12%">Qty / Kg</th>
                                         <th style="width:12%">Unit price</th>
                                         <th style="width:14%">Total price</th>

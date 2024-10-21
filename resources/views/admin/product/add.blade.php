@@ -11,8 +11,8 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <a href="{{ route('products')}}" class="btn btn-primary waves-effect waves-light primary_bg">            
-                            <i class="fas fa-arrow-alt-circle-left"></i>               
+                        <a href="{{ route('products')}}" class="btn btn-primary waves-effect waves-light primary_bg">
+                            <i class="fas fa-arrow-alt-circle-left"></i>
                             &nbsp;Back
                         </a>
 
@@ -38,7 +38,7 @@
                             
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Product name
+                                    {{ __('messages.Product') }}
                                 </label>
                                 <div class="form-group col-sm-10">
                                     <input name="name" class="form-control" type="text" id="example-text-input" value="{{old('name')}}">
@@ -50,7 +50,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Product name (row2)
+                                    {{ __('messages.Product') }} (row2)
                                 </label>
                                 <div class="form-group col-sm-10">
                                     <input name="sub_name" class="form-control" type="text" id="example-text-input" value="{{old('sub_name')}}">
@@ -88,10 +88,10 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Category</label>
+                                <label class="col-sm-2 col-form-label">{{ __('messages.Category') }}</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" name="category_id" >
-                                        <option value=""> - Category - </option>
+                                        <option value=""> - {{ __('messages.Category') }} - </option>
                                         @foreach ($categories as $item)
                                         <option value="{{$item->id}}" {{ $item->id == old('category_id') ? 'selected' : ''}} >{{$item->name}}</option>
                                         @endforeach

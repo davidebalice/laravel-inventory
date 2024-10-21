@@ -71,8 +71,8 @@
                                                     <thead>
                                                     <tr>
                                                         <td><strong>Sl </strong></td>
-                                                        <td class="text-center"><strong>Category</strong></td>
-                                                        <td class="text-center"><strong>Product name</strong>
+                                                        <td class="text-center"><strong>{{ __('messages.Category') }}</strong></td>
+                                                        <td class="text-center"><strong>{{ __('messages.Product') }}</strong>
                                                         </td>
                                                         <td class="text-center"><strong>Current stock</strong>
                                                         </td>

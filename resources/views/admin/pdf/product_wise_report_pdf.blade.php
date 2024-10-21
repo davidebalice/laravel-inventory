@@ -86,12 +86,12 @@
         <thead>
         <tr>
           
-            <td class="text-center"><strong>Supplier Name </strong></td>
+            <td class="text-center"><strong>Supplier</strong></td>
             <td class="text-center"><strong>Unit  </strong>
             </td>
-            <td class="text-center"><strong>Category</strong>
+            <td class="text-center"><strong>{{ __('messages.Category') }}</strong>
             </td>
-            <td class="text-center"><strong>Product Name</strong>
+            <td class="text-center"><strong>{{ __('messages.Product') }}</strong>
             </td>
             <td class="text-center"><strong>Stock  </strong>
             </td>

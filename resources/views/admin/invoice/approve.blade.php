@@ -59,8 +59,8 @@
                                     <table border="0" class="table table-light" width="100%">
                                         <thead>
                                             <tr>
-                                                <th class="text-center">Category</th>
-                                                <th class="text-center">Product</th>
+                                                <th class="text-center">{{ __('messages.Category') }}</th>
+                                                <th class="text-center">{{ __('messages.Product') }}</th>
                                                 <th class="text-center">Current stock</th>
                                                 <th class="text-center">Quantity</th>
                                                 <th class="text-center">Unit Price </th>
