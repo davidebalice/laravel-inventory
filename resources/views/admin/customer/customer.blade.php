@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Customers</h4>
+                    <h4 class="mb-sm-0">{{ __('messages.Customers') }}</h4>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
                         <a href="{{route('customer.add')}}" class="btn btn-dark  waves-effect waves-light mb-3 primary_bg">
                             <i class="fas fa-plus-circle"> </i>
                             &nbsp;
-                            Customer
+                            {{ __('messages.Customer') }}
                         </a>
 
                         <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">

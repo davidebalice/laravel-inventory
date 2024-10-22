@@ -65,35 +65,31 @@
                     <h3 class="font-size-16"><strong>Customer Invoice</strong></h3>
                 </div>
                 <div class="">
-<div class="table-responsive">
-    <table class="table">
-        <thead>
-        <tr>
-            <td><strong>Customer Name </strong></td>
-            <td class="text-center"><strong>Customer Mobile</strong></td>
-            <td class="text-center"><strong>Address</strong>
-            </td>
-            <td class="text-center"><strong>Description</strong>
-            </td>
-            
-        </tr>
-        </thead>
-        <tbody>
-        <!-- foreach ($order->lineItems as $line) or some such thing here -->
-        <tr>
-            <td> {{ $payment['customer']['name'] }}</td>
-            <td class="text-center">{{ $payment['customer']['mobile_no']  }}</td>
-            <td class="text-center">{{ $payment['customer']['email']  }}</td>
-             <td class="text-center">{{ $invoice->description  }}</td>
-            
-        </tr>
-        
-                            
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <td><strong>{{ __('messages.Customer') }}</strong></td>
+                                <td class="text-center"><strong>Customer Mobile</strong></td>
+                                <td class="text-center"><strong>Address</strong>
+                                </td>
+                                <td class="text-center"><strong>Description</strong>
+                                </td>
+                                
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- foreach ($order->lineItems as $line) or some such thing here -->
+                            <tr>
+                                <td> {{ $payment['customer']['name'] }}</td>
+                                <td class="text-center">{{ $payment['customer']['mobile_no']  }}</td>
+                                <td class="text-center">{{ $payment['customer']['email']  }}</td>
+                                <td class="text-center">{{ $invoice->description  }}</td>
+                                
+                            </tr>
                             </tbody>
                         </table>
                     </div>
-
-                  
                 </div>
             </div>
 

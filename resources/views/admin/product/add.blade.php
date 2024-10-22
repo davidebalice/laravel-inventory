@@ -13,12 +13,12 @@
 
                         <a href="{{ route('products')}}" class="btn btn-primary waves-effect waves-light primary_bg">
                             <i class="fas fa-arrow-alt-circle-left"></i>
-                            &nbsp;Back
+                            &nbsp;{{ __('messages.Back') }}
                         </a>
 
                         <hr />
 
-                        <h4 class="card-title mb-5">Add product</h4>
+                        <h4 class="card-title mb-5">{{ __('messages.AddProduct') }}</h4>
                      
                         
                         <form id="frm_data" method="post" action="{{ route('product.store')}}" enctype="multipart/form-data">
@@ -73,7 +73,7 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Supplier</label>
+                                <label class="col-sm-2 col-form-label">{{ __('messages.Supplier') }}</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" name="supplier_id" >
                                         <option value=""> - Supplier - </option>

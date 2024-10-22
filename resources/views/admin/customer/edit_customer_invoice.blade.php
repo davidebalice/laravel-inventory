@@ -23,7 +23,7 @@
                 <div class="card">
                     <div class="card-body">
                         <a href="{{ route('credit.customer') }}" class="btn btn-dark btn-rounded waves-effect waves-light" style="float:right;">
-                            <i class="fa fa-list"> Back </i>
+                            <i class="fa fa-list"> {{ __('messages.Back') }} </i>
                         </a>
                         <br><br>
                         <div class="row">
@@ -37,7 +37,7 @@
                                             <table class="table">
                                                 <thead>
                                                 <tr>
-                                                    <td><strong>Customer name </strong></td>
+                                                    <td><strong>{{ __('messages.Customer') }}</strong></td>
                                                     <td class="text-center"><strong>mobile</strong></td>
                                                     <td class="text-center"><strong>Address</strong>
                                                     </td>
@@ -47,8 +47,8 @@
                                                     <tr>
                                                         <td> {{ $payment['customer']['name'] }}</td>
                                                         <td class="text-center">{{ $payment['customer']['mobile_no']  }}</td>
-                                                        <td class="text-center">{{ $payment['customer']['email']  }}</td>                       
-                                                    </tr>                                  
+                                                        <td class="text-center">{{ $payment['customer']['email']  }}</td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>

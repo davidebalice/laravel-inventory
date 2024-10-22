@@ -27,7 +27,7 @@
                         <a href="{{route('supplier.add')}}" class="btn btn-dark  waves-effect waves-light mb-3 primary_bg">
                             <i class="fas fa-plus-circle"> </i>
                             &nbsp;
-                            Supplier
+                            {{ __('messages.Supplier') }}
                         </a>
 
                         <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">

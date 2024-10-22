@@ -28,7 +28,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route ('customers') }}">{{ __('messages.Customers') }}</a></li>
-                        <li><a href="{{ route ('customer.add') }}">Add customer</a></li>
+                        <li><a href="{{ route ('customer.add') }}">{{ __('messages.AddCustomer') }}</a></li>
                         <li><a href="{{ route('credit.customer') }}">Credit customers</a></li>
                         <li><a href="{{ route('paid.customer') }}">Paid customers</a></li>
                         <li><a href="{{ route('customer.wise.report') }}">Customer Wise Report</a></li>
@@ -53,7 +53,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route ('categories') }}">{{ __('messages.Categories') }}</a></li>
-                        <li><a href="{{ route ('category.add') }}">Add category</a></li>
+                        <li><a href="{{ route ('category.add') }}">{{ __('messages.AddCategory') }}</a></li>
                     </ul>
                 </li>
 
@@ -64,7 +64,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route ('products') }}">{{ __('messages.Products') }}</a></li>
-                        <li><a href="{{ route ('product.add') }}">Add product</a></li>
+                        <li><a href="{{ route ('product.add') }}">{{ __('messages.AddProduct') }}</a></li>
                     </ul>
                 </li>
 
@@ -101,7 +101,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('stock.report') }}">Stock report</a></li>
-                        <li><a href="{{ route('stock.supplier.wise') }}">Supplier / Product Wise </a></li>
+                        <li><a href="{{ route('stock.supplier.wise') }}">{{ __('messages.Supplier') }} / Product Wise </a></li>
                     </ul>
                 </li>
 

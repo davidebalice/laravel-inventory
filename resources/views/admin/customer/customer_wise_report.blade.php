@@ -29,7 +29,7 @@
                             <form method="GET" action="{{ route('customer.wise.credit.report') }}" id="myForm" target="_blank" >
                                 <div class="row">
                                     <div class="col-sm-8 form-group">
-                                        <label>Customer Name </label>
+                                        <label>{{ __('messages.Customer') }}</label>
                                         <select name="customer_id" class="form-select select2"  >
                                             <option value="">Select Customer</option>
                                             @foreach($customers as $cus)
@@ -48,13 +48,13 @@
                             <form method="GET" action="{{ route('customer.wise.paid.report') }}" id="myForm" target="_blank" >
                                 <div class="row">
                                     <div class="col-sm-8 form-group">
-                                        <label>Customer Name </label>
+                                        <label>{{ __('messages.Cusomer') }} </label>
                                         <select name="customer_id" class="form-select select2"  >
                                             <option value="">Select Customer</option>
                                             @foreach($customers as $cus)
                                                 <option value="{{ $cus->id }}">{{ $cus->name }}</option>
                                             @endforeach
-                                        </select>                    
+                                        </select>
                                     </div>
                                     <div class="col-sm-4" style="padding-top: 28px;">
                                         <button type="submit" class="btn btn-primary">Search</button>

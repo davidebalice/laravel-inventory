@@ -43,13 +43,13 @@
 
             <div class="row">
                 <div class="col-sm-8 form-group">
-                    <label>Supplier Name </label>
+                    <label>{{ __('messages.Supplier') }}</label>
               <select name="supplier_id" class="form-select select2"  >
                 <option value="">Select Supplier</option>
                 @foreach($supppliers as $supp)
                 <option value="{{ $supp->id }}">{{ $supp->name }}</option>
                @endforeach
-                </select>                    
+                </select>
                 </div>
 
                 <div class="col-sm-4" style="padding-top: 28px;">

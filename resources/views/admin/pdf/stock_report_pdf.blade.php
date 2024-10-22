@@ -83,7 +83,7 @@
         <thead>
         <tr>
             <td><strong>Sl </strong></td>
-            <td class="text-center"><strong>Supplier Name </strong></td>
+            <td class="text-center"><strong>{{ __('messages.Supplier') }} </strong></td>
             <td class="text-center"><strong>Unit  </strong>
             </td>
             <td class="text-center"><strong>{{ __('messages.Category') }}</strong>

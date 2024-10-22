@@ -11,14 +11,14 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <a href="{{ route('customers')}}" class="btn btn-primary waves-effect waves-light primary_bg">            
-                            <i class="fas fa-arrow-alt-circle-left"></i>               
-                            &nbsp;Back
+                        <a href="{{ route('customers')}}" class="btn btn-primary waves-effect waves-light primary_bg">
+                            <i class="fas fa-arrow-alt-circle-left"></i>
+                            &nbsp;{{ __('messages.Back') }}
                         </a>
 
                         <hr />
 
-                        <h4 class="card-title mb-5">Add customer</h4>
+                        <h4 class="card-title mb-5">{{ __('messages.AddCustomer') }}</h4>
                      
                         
                         <form id="frm_data" method="post" action="{{ route('customer.store')}}" enctype="multipart/form-data">
@@ -38,7 +38,7 @@
                             
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Name
+                                    {{ __('messages.Name') }}
                                 </label>
                                 <div class="form-group col-sm-10">
                                     <input name="name" class="form-control" type="text" id="example-text-input" value="{{old('name')}}">

@@ -39,7 +39,7 @@
                                             <tr role="row">
                                                 <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 10px;" aria-label="Position: activate to sort column ascending">Invoice no.</th>
                                                 <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Date</th>
-                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Customer</th>
+                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Customer') }}</th>
                                                 <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Description</th>
                                                 <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Amount</th>
                                                 <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">Actions</th>
@@ -64,7 +64,7 @@
                                                     $class_row="odd";
                                                 @endphp
                                             @endif
-                                            <tr class="{{ $class_row }}">                         
+                                            <tr class="{{ $class_row }}">
                                                 <td>{{ $item->invoice_no ?? 'None'}}</td>
                                                 <td>{{ date('d/m/Y',strtotime($item->date)) ?? 'None'}}</td>
                                                 <td>{{ $item['payment']['customer']['name'] ?? 'None'}}</td>
@@ -78,7 +78,7 @@
                                                     <span class="btn btn-success">Approved</span>
                                                     @endif
                                                 </td>
-                                                --}}                                                                                   
+                                                --}}
                                                 <td>
                                                     <a href="{{ route('invoice.pdf',$item->id) }}" class="btn btn-success sm" title="Print Invoice" >  <i class="fa fa-print"></i> &nbsp;Print </a>
                                                     {{--

@@ -20,7 +20,7 @@
                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                             <tr>
-                                <th>Supplier</th>
+                                <th>{{ __('messages.Supplier') }}</th>
                                 <th>Unit</th>
                                 <th>{{ __('messages.Category') }}</th> 
                                 <th>{{ __('messages.Product') }}</th> 

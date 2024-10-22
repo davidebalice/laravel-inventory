@@ -11,9 +11,9 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <a href="{{ route('purchases')}}" class="btn btn-primary waves-effect waves-light primary_bg">            
-                            <i class="fas fa-arrow-alt-circle-left"></i>               
-                            &nbsp;Back
+                        <a href="{{ route('purchases')}}" class="btn btn-primary waves-effect waves-light primary_bg">
+                            <i class="fas fa-arrow-alt-circle-left"></i>
+                            &nbsp;{{ __('messages.Back') }}
                         </a>
 
                         <hr />
@@ -38,7 +38,7 @@
 
                             <div class="col-md-4 col-lg-3">
                                 <label for="supplier_id" class="col-form-label">
-                                    Supplier
+                                    {{ __('messages.Supplier') }}
                                 </label>
                                 <select class="form-select select2" name="supplier_id" id="supplier_id" >
                                     <option value=""> - Supplier - </option>

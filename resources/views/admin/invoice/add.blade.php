@@ -10,7 +10,7 @@
 
                         <a href="{{ route('invoices')}}" class="btn btn-primary waves-effect waves-light primary_bg">
                             <i class="fas fa-arrow-alt-circle-left"></i>
-                            &nbsp;Back
+                            &nbsp;{{ __('messages.Back') }}
                         </a>
 
                         <hr />
@@ -150,7 +150,7 @@
 
                                 <div class="form-group col-md-3 mt-3">
                                     <label>
-                                       Customer
+                                        {{ __('messages.Customer') }}
                                     </label>
                                     <select name="customer_id" id="customer_id" class="form-select">
                                         <option value="">Select customer</option>
@@ -165,10 +165,10 @@
 
                             <div id="new_customer" class="row new_customer mt-3" style="display:none">
                                 <label>
-                                    New customer
+                                    {{ __('messages.AddCustomer') }}
                                  </label>
                                 <div class="form-group col-md-3">
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Name">
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="{{ __('messages.Name') }}">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <input type="text" name="surname" id="surname" class="form-control" placeholder="Surname">

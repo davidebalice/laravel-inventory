@@ -86,7 +86,7 @@
         <thead>
         <tr>
           
-            <td class="text-center"><strong>Supplier</strong></td>
+            <td class="text-center"><strong>{{ __('messages.Supplier') }}</strong></td>
             <td class="text-center"><strong>Unit  </strong>
             </td>
             <td class="text-center"><strong>{{ __('messages.Category') }}</strong>

@@ -70,12 +70,12 @@
                                     </div>
                                     <div class="">
                                         <div class="table-responsive">
-                                            <h3 class="text-center"><strong>Supplier Name : </strong> {{ $allData['0']['supplier']['name'] }} </h3>
+                                            <h3 class="text-center"><strong>{{ __('messages.Supplier') }} : </strong> {{ $allData['0']['supplier']['name'] }} </h3>
                                             <table class="table">
                                                 <thead>
                                                 <tr>
                                                     <td><strong>Sl </strong></td>
-                                                    <td class="text-center"><strong>Supplier Name </strong></td>
+                                                    <td class="text-center"><strong>{{ __('messages.Supplier') }} </strong></td>
                                                     <td class="text-center"><strong>Unit  </strong>
                                                     </td>
                                                     <td class="text-center"><strong>{{ __('messages.Category') }}</strong>

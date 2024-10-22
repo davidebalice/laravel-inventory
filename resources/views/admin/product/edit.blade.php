@@ -13,7 +13,7 @@
 
                         <a href="{{ route('products')}}" class="btn btn-primary waves-effect waves-light primary_bg">
                             <i class="fas fa-arrow-alt-circle-left"></i>
-                            &nbsp;Back
+                            &nbsp;{{ __('messages.Back') }}
                         </a>
 
                         <hr />
@@ -91,7 +91,7 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Supplier</label>
+                                <label class="col-sm-2 col-form-label">{{ __('messages.Supplier') }}</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" name="supplier_id" aria-label="Default select example">
                                         <option value=""> - Supplier - </option>
@@ -106,7 +106,7 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Supplier</label>
+                                <label class="col-sm-2 col-form-label">{{ __('messages.Supplier') }}</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" name="unit_id" aria-label="Default select example" style="width:100px">
                                         <option value=""> - Unit - </option>

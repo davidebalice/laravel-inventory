@@ -38,10 +38,10 @@
                                      @csrf  
                                      <table border="0" class="table table-light" width="100%">
                                         <tr>
-                                            <td><strong>Customer info</strong></td>
+                                            <td><strong>{{ __('messages.Customer') }}</strong></td>
                                         </tr>
                                         <tr>
-                                            <td>Name: <strong>{{ $payment['customer']['name']}}</strong></td>
+                                            <td>{{ __('messages.Name') }}: <strong>{{ $payment['customer']['name']}}</strong></td>
                                         </tr>
                                         <tr>
                                             <td>Mobile: <strong>{{ $payment['customer']['mobile_no']}}</strong></td>
@@ -52,7 +52,7 @@
                                         <tr>
                                             <td>Description: <strong>{{ $invoice->description}}</strong></td>
                                         </tr>
-                                    </table>    
+                                    </table>
                                     
                                     <br/>
 

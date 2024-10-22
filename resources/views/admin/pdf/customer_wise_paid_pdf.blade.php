@@ -59,7 +59,7 @@
                                                 <thead>
                                                 <tr>
                                                     <td><strong>Sl </strong></td>
-                                                    <td class="text-center"><strong>Customer name </strong></td>
+                                                    <td class="text-center"><strong>{{ __('messages.Customer') }}</strong></td>
                                                     <td class="text-center"><strong>Invoice No  </strong>
                                                     </td>
                                                     <td class="text-center"><strong>Date</strong>

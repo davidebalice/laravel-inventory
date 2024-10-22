@@ -62,7 +62,7 @@
                                             <table class="table">
                                                 <thead>
                                                 <tr>
-                                                    <td><strong>Customer Name </strong></td>
+                                                    <td><strong>{{ __('messages.Customer') }}</strong></td>
                                                     <td class="text-center"><strong>Customer Mobile</strong></td>
                                                     <td class="text-center"><strong>Address</strong>
                                                     </td>
