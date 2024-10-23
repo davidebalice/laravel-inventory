@@ -84,7 +84,7 @@
         <tr>
             <td><strong>Sl </strong></td>
             <td class="text-center"><strong>{{ __('messages.Supplier') }} </strong></td>
-            <td class="text-center"><strong>Unit  </strong>
+            <td class="text-center"><strong>{{ __('messages.Units') }}  </strong>
             </td>
             <td class="text-center"><strong>{{ __('messages.Category') }}</strong>
             </td>
@@ -101,16 +101,15 @@
         </tr>
         </thead>
         <tbody>
-        <!-- foreach ($order->lineItems as $line) or some such thing here -->
         
     
         @foreach($allData as $key => $item)
 
- @php
-$buying_total = App\Models\Purchase::where('category_id',$item->category_id)->where('product_id',$item->id)->where('status','1')->sum('buying_qty');
+        @php
+        $buying_total = App\Models\Purchase::where('category_id',$item->category_id)->where('product_id',$item->id)->where('status','1')->sum('buying_qty');
 
-$selling_total = App\Models\InvoiceDetail::where('category_id',$item->category_id)->where('product_id',$item->id)->where('status','1')->sum('selling_qty');
-@endphp
+        $selling_total = App\Models\InvoiceDetail::where('category_id',$item->category_id)->where('product_id',$item->id)->where('status','1')->sum('selling_qty');
+        @endphp
 
 
         <tr>

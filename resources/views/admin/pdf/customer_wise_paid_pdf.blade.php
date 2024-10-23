@@ -60,9 +60,9 @@
                                                 <tr>
                                                     <td><strong>Sl </strong></td>
                                                     <td class="text-center"><strong>{{ __('messages.Customer') }}</strong></td>
-                                                    <td class="text-center"><strong>Invoice No  </strong>
+                                                    <td class="text-center"><strong>{{ __('messages.Invoice') }} n.  </strong>
                                                     </td>
-                                                    <td class="text-center"><strong>Date</strong>
+                                                    <td class="text-center"><strong>{{ __('messages.Date') }}</strong>
                                                     </td>
                                                     <td class="text-center"><strong>Due amount</strong>
                                                     </td>
@@ -79,7 +79,7 @@
                                                         <td class="text-center"> {{ $item['customer']['name'] }} </td> 
                                                         <td class="text-center"> #{{ $item['invoice']['invoice_no'] }}   </td> 
                                                         <td class="text-center"> {{  date('d-m-Y',strtotime($item['invoice']['date'])) }} </td> 
-                                                        <td class="text-center"> {{ $item->due_amount }} </td>     
+                                                        <td class="text-center"> {{ $item->due_amount }} </td>
                                                     </tr>
                                                     @php
                                                         $total_due += $item->due_amount;
@@ -100,7 +100,7 @@
 
                                         @php
                                             $date = new DateTime('now', new DateTimeZone('Asia/Dhaka')); 
-                                        @endphp         
+                                        @endphp
                                         <i>Printing Time : {{ $date->format('F j, Y, g:i a') }}</i>   
 
                                         <div class="d-print-none">
@@ -112,7 +112,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>      
+                        </div>
                     </div>
                 </div>
             </div>

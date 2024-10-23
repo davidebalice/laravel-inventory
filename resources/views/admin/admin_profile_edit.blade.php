@@ -9,10 +9,8 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-
-                        <h4 class="card-title">Edit profile</h4>
-                    
-                        
+                        <h4 class="card-title"> {{ __('messages.EditProfile') }}</h4>
+                        <br />
                         <form id="frm_profile" method="post" action="/store/profile" enctype="multipart/form-data">
                             @csrf
                             <div class="row mb-3">
@@ -26,7 +24,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Surname
+                                    {{ __('messages.Surname') }}
                                 </label>
                                 <div class="col-sm-10">
                                     <input name="surname" class="form-control" type="text" id="example-text-input" value="{{ $editData->surname }}">
@@ -55,7 +53,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                   Profile image
+                                    {{ __('messages.Image') }}
                                 </label>
                                 <div class="col-sm-10">
                                     <input name="profile_image" id="profile_image"  class="form-control" type="file">
@@ -74,7 +72,7 @@
 
                             <a href="#" onclick="$('#frm_profile').submit()" class="btn btn-primary waves-effect waves-light">
                                 <i class="fas fa-save"></i>
-                                &nbsp;Save
+                                &nbsp;{{ __('messages.Save') }}
                             </a>
                         </form>
 

@@ -25,16 +25,6 @@
             <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
                 <i class="ri-menu-2-line align-middle"></i>
             </button>
-
-            <!-- App Search-->
-            <form class="app-search d-none d-lg-block">
-                <div class="position-relative">
-                    <input type="text" class="form-control" placeholder="Search...">
-                    <span class="ri-search-line"></span>
-                </div>
-            </form>
-
-            
         </div>
 
         <div class="d-flex">
@@ -46,32 +36,20 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
                     aria-labelledby="page-header-search-dropdown">
-        
-                    <form class="p-3">
-                        <div class="mb-3 m-0">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search ...">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary" type="submit"><i class="ri-search-line"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
 
             <div class="dropdown d-none d-sm-inline-block">
                 <button type="button" class="btn header-item waves-effect"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="" src="{{ asset('backend/assets/images/flags/us.jpg') }}" alt="Header Language" height="16">
+                    <i class="fas fa-globe" style="font-size:20px"></i> 
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
-                    <p>Lingua corrente: {{ app()->getLocale() }}</p>
-                    <a href="lang/change/en" class="dropdown-item notify-item">
-                        <img src="{{ asset('backend/assets/images/flags/en.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+                    <a href="{{ route('changeLang', ['lang' => 'en']) }}" class="dropdown-item notify-item">
+                        <img src="{{ asset('backend/assets/images/flags/us.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
                     </a>
-                    <a href="lang/change/it" class="dropdown-item notify-item">
-                        <img src="{{ asset('backend/assets/images/flags/italy.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                    <a href="{{ route('changeLang', ['lang' => 'it']) }}" class="dropdown-item notify-item">
+                        <img src="{{ asset('backend/assets/images/flags/italy.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italiano</span>
                     </a>
                 </div>
             </div>
@@ -81,8 +59,6 @@
                     <i class="ri-fullscreen-line"></i>
                 </button>
             </div>
-
-          
 
             @php
                 $id = Auth::user()->id;
@@ -103,23 +79,17 @@
                     </div>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
-                    <!-- item-->
                     <a class="dropdown-item" href="{{ route('admin.profile')}}">
-                        <i class="ri-user-line align-middle me-1"></i> Profile
+                        <i class="ri-user-line align-middle me-1"></i> {{ __('messages.Profile') }}
                     </a>
                     <a class="dropdown-item" href="{{ route('change.password') }}">
-                        <i class="ri-wallet-2-line align-middle me-1"></i> 
-                        Change password
+                        <i class="ri-wallet-2-line align-middle me-1"></i>
+                        {{ __('passwords.ChangePassword') }}
                     </a>
-                    <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end mt-1">11</span><i class="ri-settings-2-line align-middle me-1"></i> Settings</a>
-                    <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger" href="{{ route('admin.logout')}}"><i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
                 </div>
             </div>
-
-           
-
         </div>
     </div>
 </header>

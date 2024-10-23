@@ -33,13 +33,13 @@
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable_info">
                                         <thead>
                                             <tr role="row">
-                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 10px;" aria-label="Position: activate to sort column ascending">Invoice no.</th>
-                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Date</th>
+                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 10px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Invoice') }} n.</th>
+                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Date') }}</th>
                                                 <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Customer') }}</th>
-                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Description</th>
+                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Description') }}</th>
                                                 <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Amount</th>
                                                 <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 50px;" aria-label="Position: activate to sort column ascending">Status</th>
-                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">Actions</th>
+                                                <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">{{ __('messages.Manage') }}</th>
                                             </tr>
                                         </thead>
 
@@ -61,7 +61,7 @@
                                                     $class_row="odd";
                                                 @endphp
                                             @endif
-                                            <tr class="{{ $class_row }}">                         
+                                            <tr class="{{ $class_row }}">
                                                 <td>{{ $item->invoice_no ?? 'None'}}</td>
                                                 <td>{{ date('d/m/Y',strtotime($item->date)) ?? 'None'}}</td>
                                                 <td>{{ $item['payment']['customer']['name'] ?? 'None'}}</td>
@@ -79,15 +79,15 @@
                                                 <td>
                                                     {{--
                                                     <a href="{{ route('invoice.edit',$item->id) }}" class="btn btn-info sm" title="Edit">
-                                                        <i class="fas fa-edit"></i> Edit
+                                                        <i class="fas fa-edit"></i> {{ __('messages.Edit') }}
                                                     </a>
                                                     --}}
                                                     @if ($item->status == 0)
                                                     <a href="{{ route('invoice.approve',$item->id) }}" id="approve" class="btn btn-dark sm" title="Approve">
                                                         <i class="fas fa-check-circle"></i> Approve
                                                     </a>
-                                                    <a href="{{ route('invoice.delete',$item->id) }}" id="delete" class="btn btn-danger sm" title="Delete">
-                                                        <i class="fas fa-trash"></i> Delete
+                                                    <a href="{{ route('invoice.delete',$item->id) }}" id="delete" class="btn btn-danger sm" title="{{ __('messages.Delete') }}">
+                                                        <i class="fas fa-trash"></i> {{ __('messages.Delete') }}
                                                     </a>
                                                     @endif
                                                 </td>

@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Units</h4>
+                    <h4 class="mb-sm-0">{{ __('messages.Units') }}</h4>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
                         <a href="{{route('unit.add')}}" class="btn btn-dark  waves-effect waves-light mb-3 primary_bg">
                             <i class="fas fa-plus-circle"> </i>
                             &nbsp;
-                            Unit
+                            {{ __('messages.Units') }}
                         </a>
 
                         <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
@@ -37,8 +37,8 @@
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable_info">
                                         <thead>
                                         <tr role="row">
-                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 400px;" aria-label="Position: activate to sort column ascending">Name</th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">Actions</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 400px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Name') }}</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">{{ __('messages.Manage') }}</th>
                                         </thead>
 
                                         <tbody>
@@ -62,11 +62,11 @@
                                             <tr class="{{ $class_row }}">
                                                 <td>{{ $item->name }}</td>
                                                 <td>
-                                                    <a href="{{ route('unit.edit',$item->id) }}" class="btn btn-info sm" title="Edit">
-                                                        <i class="fas fa-edit"></i> Edit
+                                                    <a href="{{ route('unit.edit',$item->id) }}" class="btn btn-info sm" title="{{ __('messages.Edit') }}">
+                                                        <i class="fas fa-edit"></i> {{ __('messages.Edit') }}
                                                     </a>
-                                                    <a href="{{ route('unit.delete',$item->id) }}" id="delete" class="btn btn-danger sm" title="Delete">
-                                                        <i class="fas fa-trash"></i> Delete
+                                                    <a href="{{ route('unit.delete',$item->id) }}" id="delete" class="btn btn-danger sm" title="{{ __('messages.Delete') }}">
+                                                        <i class="fas fa-trash"></i> {{ __('messages.Delete') }}
                                                     </a>
                                                 </td>
                                             </tr>
@@ -81,10 +81,10 @@
 
                     </div>
                 </div>
-            </div> <!-- end col -->
-        </div> <!-- end row -->
+            </div>
+        </div>
 
-    </div> <!-- container-fluid -->
+    </div>
 </div>
 
 

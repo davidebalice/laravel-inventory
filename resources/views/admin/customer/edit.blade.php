@@ -25,7 +25,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                   Image
+                                    {{ __('messages.Image') }}
                                 </label>
                                 <div class="col-sm-10">
                                     <input name="image" id="image"  class="form-control" type="file">
@@ -33,7 +33,7 @@
                                         <img id="showImage" class="h-100 w-auto justify-content-center" src="{{ (!empty($customer->image)) ? url($customer->image) : url('upload/no_image.jpg') }}" alt="image">                                   
                                     </div>
                                 </div>
-                            </div>   
+                            </div>
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
@@ -49,7 +49,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Surname
+                                    {{ __('messages.Surname') }}
                                 </label>
                                 <div class="form-group col-sm-10">
                                     <input name="surname" class="form-control" type="text" id="example-text-input" value="{{ $customer->surname }}">
@@ -73,7 +73,7 @@
                                
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Mobile number
+                                    Mobile
                                 </label>
                                 <div class="form-group col-sm-10">
                                     <input name="mobile_no" class="form-control" type="text" id="example-text-input" value="{{ $customer->mobile_no }}">
@@ -85,7 +85,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Adress
+                                    {{ __('messages.Address') }}
                                 </label>
                                 <div class="form-group col-sm-10">
                                     <input name="address" class="form-control" type="text" id="example-text-input" value="{{ $customer->address }}">
@@ -97,28 +97,13 @@
 
                             <hr />
 
-                            <a href="#" onclick="$('#frm_data').submit()" class="btn btn-primary waves-effect waves-light primary_bg">            
-                                <i class="fas fa-save"></i>               
-                                &nbsp;Save
+                            <a href="#" onclick="$('#frm_data').submit()" class="btn btn-primary waves-effect waves-light primary_bg">
+                                <i class="fas fa-save"></i>
+                                &nbsp;{{ __('messages.Save') }}
                             </a>
                         </form>
 
-                        
-                        <!--
-
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label">Select</label>
-                            <div class="col-sm-10">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected="">Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                    </select>
-                            </div>
-                        </div>
-                       
-                        -->
+                  
                     </div>
                 </div>
             </div>

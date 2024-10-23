@@ -31,12 +31,12 @@
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable_info">
                                         <thead>
                                         <tr role="row">
-                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 90px;" aria-label="Position: activate to sort column ascending">Date</th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 154px;" aria-label="Position: activate to sort column ascending">Name</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 90px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Date') }}</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 154px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Name') }}</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 154px;" aria-label="Position: activate to sort column ascending">Email</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 154px;" aria-label="Position: activate to sort column ascending">Tel</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 154px;" aria-label="Position: activate to sort column ascending">Subject</th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 125px;" aria-label="Office: activate to sort column ascending">Action</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 125px;" aria-label="Office: activate to sort column ascending">{{ __('messages.Manage') }}</th>
                                         </thead>
 
                                         <tbody>
@@ -66,11 +66,11 @@
                                                 <td>
                                                     {{--
                                                     <a href="{{ route('edit.multi.image',$message->id) }}" class="btn btn-info sm" title="Edit data">
-                                                        <i class="fas fa-edit"></i> Edit
+                                                        <i class="fas fa-edit"></i> {{ __('messages.Edit') }}
                                                     </a>
                                                     --}}
-                                                    <a href="{{ route('delete.message',$message->id) }}" id="delete" class="btn btn-danger sm" title="Delete data">
-                                                        <i class="fas fa-trash"></i> Delete
+                                                    <a href="{{ route('delete.message',$message->id) }}" id="delete" class="btn btn-danger sm" title="{{ __('messages.Delete') }}">
+                                                        <i class="fas fa-trash"></i> {{ __('messages.Delete') }}
                                                     </a>
                                                 </td>
                                             </tr>

@@ -21,11 +21,11 @@
                             <thead>
                             <tr>
                                 <th>{{ __('messages.Supplier') }}</th>
-                                <th>Unit</th>
+                                <th>{{ __('messages.Units') }}</th>
                                 <th>{{ __('messages.Category') }}</th> 
                                 <th>{{ __('messages.Product') }}</th> 
-                                <th>In Qty</th> 
-                                <th>Out Qty </th>  
+                                <th>In Qty</th>
+                                <th>Out Qty </th>
                                 <th>Stock </th>
                             </thead>
     
@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </div>
-        </div>                
+        </div>
     </div>
 </div>
 @endsection

@@ -39,7 +39,7 @@
                                                 <tr>
                                                     <td><strong>{{ __('messages.Customer') }}</strong></td>
                                                     <td class="text-center"><strong>mobile</strong></td>
-                                                    <td class="text-center"><strong>Address</strong>
+                                                    <td class="text-center"><strong>{{ __('messages.Address') }}</strong>
                                                     </td>
                                                 </tr>
                                                 </thead>
@@ -76,7 +76,7 @@
                                                         </td>
                                                         <td class="text-center"><strong>Current stock</strong>
                                                         </td>
-                                                        <td class="text-center"><strong>Quantity</strong>
+                                                        <td class="text-center"><strong>{{ __('messages.Quantity') }}</strong>
                                                         </td>
                                                         <td class="text-center"><strong>Unit price </strong>
                                                         </td>

@@ -7,12 +7,12 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Invoice</h4>
+                    <h4 class="mb-sm-0">{{ __('messages.Invoice') }}</h4>
 
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);"> </a></li>
-                            <li class="breadcrumb-item active">Invoice</li>
+                            <li class="breadcrumb-item active">{{ __('messages.Invoice') }}</li>
                         </ol>
                     </div>
 
@@ -63,10 +63,10 @@
                                                 <thead>
                                                 <tr>
                                                     <td><strong>{{ __('messages.Customer') }}</strong></td>
-                                                    <td class="text-center"><strong>Customer Mobile</strong></td>
-                                                    <td class="text-center"><strong>Address</strong>
+                                                    <td class="text-center"><strong>{{ __('messages.Customer') }} mobile</strong></td>
+                                                    <td class="text-center"><strong>{{ __('messages.Address') }}</strong>
                                                     </td>
-                                                    <td class="text-center"><strong>Description</strong>
+                                                    <td class="text-center"><strong>{{ __('messages.Description') }}</strong>
                                                     </td>
 
                                                 </tr>
@@ -113,7 +113,7 @@
                                                         </td>
                                                         <td class="text-center"><strong>Current Stock</strong>
                                                         </td>
-                                                        <td class="text-center"><strong>Quantity</strong>
+                                                        <td class="text-center"><strong>{{ __('messages.Quantity') }}</strong>
                                                         </td>
                                                         <td class="text-center"><strong>Unit Price </strong>
                                                         </td>

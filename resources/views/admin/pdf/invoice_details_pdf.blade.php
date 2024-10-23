@@ -30,7 +30,7 @@
     <div class="row">
         <div class="col-12">
             <div class="invoice-title">
-                <h4 class="float-end font-size-16"><strong>Invoice No # {{ $payment['invoice']['invoice_no'] }}</strong></h4>
+                <h4 class="float-end font-size-16"><strong>{{ __('messages.Invoice') }} n. # {{ $payment['invoice']['invoice_no'] }}</strong></h4>
                 <h3>
                     <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo" height="24"/> Shopping Demo
                 </h3>
@@ -68,8 +68,8 @@
         <thead>
         <tr>
             <td><strong>{{ __('messages.Customer') }}</strong></td>
-            <td class="text-center"><strong>Customer Mobile</strong></td>
-            <td class="text-center"><strong>Address</strong>
+            <td class="text-center"><strong>{{ __('messages.Customer') }} mobile</strong></td>
+            <td class="text-center"><strong>{{ __('messages.Address') }}</strong>
             </td>
              
             
@@ -118,7 +118,7 @@
             </td>
             <td class="text-center"><strong>Current Stock</strong>
             </td>
-            <td class="text-center"><strong>Quantity</strong>
+            <td class="text-center"><strong>{{ __('messages.Quantity') }}</strong>
             </td>
             <td class="text-center"><strong>Unit Price </strong>
             </td>
@@ -210,22 +210,22 @@
             </tr>
 
              <tr>
-                <td colspan="4" style="text-align: center;font-weight: bold;">Date </td>
+                <td colspan="4" style="text-align: center;font-weight: bold;">{{ __('messages.Date') }}</td>
                 <td colspan="3" style="text-align: center;font-weight: bold;">Amount</td>
                 
             </tr>
-@php
-$payment_details = App\Models\PaymentDetail::where('invoice_id',$payment->invoice_id)->get();
+            
+                @php
+                $payment_details = App\Models\PaymentDetail::where('invoice_id',$payment->invoice_id)->get();
+                @endphp
 
-@endphp
-
-            @foreach($payment_details as $item)
-             <tr>
-                <td colspan="4" style="text-align: center;font-weight: bold;">{{ date('d-m-Y',strtotime($item->date)) }}</td>
-                <td colspan="3" style="text-align: center;font-weight: bold;">{{ $item->current_paid_amount }}</td>
-                
-            </tr>
-            @endforeach
+                @foreach($payment_details as $item)
+                <tr>
+                    <td colspan="4" style="text-align: center;font-weight: bold;">{{ date('d-m-Y',strtotime($item->date)) }}</td>
+                    <td colspan="3" style="text-align: center;font-weight: bold;">{{ $item->current_paid_amount }}</td>
+                    
+                </tr>
+                @endforeach
 
 
 

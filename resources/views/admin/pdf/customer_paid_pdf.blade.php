@@ -63,9 +63,9 @@
                                                 <tr>
                                                     <td><strong>Sl </strong></td>
                                                     <td class="text-center"><strong>{{ __('messages.Customer') }}</strong></td>
-                                                    <td class="text-center"><strong>Invoice No  </strong>
+                                                    <td class="text-center"><strong>{{ __('messages.Invoice') }} n.  </strong>
                                                     </td>
-                                                    <td class="text-center"><strong>Date</strong>
+                                                    <td class="text-center"><strong>{{ __('messages.Date') }}</strong>
                                                     </td>
                                                     
                                                     <td class="text-center"><strong>Due Amount  </strong>
@@ -101,9 +101,9 @@
                                             </table>
                                         </div>
                                         @php
-                                            $date = new DateTime('now', new DateTimeZone('Asia/Dhaka')); 
-                                        @endphp         
-                                        <i>Printing Time : {{ $date->format('F j, Y, g:i a') }}</i>   
+                                            $date = new DateTime('now', new DateTimeZone('Asia/Dhaka'));
+                                        @endphp
+                                        <i>Printing Time : {{ $date->format('F j, Y, g:i a') }}</i>
 
                                         <div class="d-print-none">
                                             <div class="float-end">

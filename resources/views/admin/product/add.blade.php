@@ -26,7 +26,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                   Image
+                                    {{ __('messages.Image') }}
                                 </label>
                                 <div class="col-sm-10">
                                     <input name="image" id="image"  class="form-control" type="file">
@@ -103,10 +103,10 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Unit</label>
+                                <label class="col-sm-2 col-form-label">{{ __('messages.Units') }}</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" name="unit_id"  style="width:100px;">
-                                        <option value=""> - Unit - </option>
+                                        <option value=""> - {{ __('messages.Units') }} - </option>
                                         @foreach ($units as $item)
                                         <option value="{{$item->id}}" {{ $item->id == old('unit_id') ? 'selected' : ''}} >{{$item->name}}</option>
                                         @endforeach
@@ -119,7 +119,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Quantity
+                                    {{ __('messages.Quantity') }}
                                 </label>
                                 <div class="form-group col-sm-10">
                                     <input name="quantity" class="form-control" style="width:100px;" type="text" id="example-text-input" value="{{old('quantity')}}">
@@ -131,7 +131,7 @@
                                
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                   Description
+                                    {{ __('messages.Description') }}
                                 </label>
                                 <div class="col-sm-10">
                                     <textarea name="description" class="form-control" rows="5" id="elm2">{{ old('description') }}</textarea>
@@ -143,8 +143,8 @@
 
                             <hr />
 
-                            <a href="#" onclick="$('#frm_data').submit()" class="btn btn-primary waves-effect waves-light primary_bg">            
-                                <i class="fas fa-plus-circle"></i>               
+                            <a href="#" onclick="$('#frm_data').submit()" class="btn btn-primary waves-effect waves-light primary_bg">
+                                <i class="fas fa-plus-circle"></i>
                                 &nbsp;Insert
                             </a>
                         </form>

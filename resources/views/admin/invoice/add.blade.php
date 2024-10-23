@@ -20,7 +20,7 @@
                         <div class="row">
                             <div class="col-md-2 col-lg-1">
                                 <label for="invoice_no" class="col-form-label">
-                                    Invoices n.
+                                    {{ __('messages.Invoice') }} n.
                                 </label>
                                 <input name="invoice_no" class="form-control example-text-input" value="{{ $invoice_no }}" type="text" id="invoice_no" readonly style="background: #f1f1f1">
                             </div> 
@@ -29,7 +29,7 @@
                         <div class="row">
                             <div class="col-md-4 col-lg-2">
                                 <label for="date" class="col-form-label">
-                                    Date
+                                    {{ __('messages.Date') }}
                                 </label>
                                 <input name="date" class="form-control example-text-input" value="{{ $date }}" type="date" id="date"> 
                             </div>
@@ -92,10 +92,10 @@
                                     <tr>
                                         <th style="width:24%">{{ __('messages.Category') }}</th>
                                         <th style="width:24%">{{ __('messages.Product') }}</th>
-                                        <th style="width:12%">Qty / Kg</th>
+                                        <th style="width:12%">{{ __('messages.Quantity') }} / Kg</th>
                                         <th style="width:12%">Unit price</th>
                                         <th style="width:14%">Total price</th>
-                                        <th style="width:14%">Action</th>
+                                        <th style="width:14%">{{ __('messages.Manage') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody id="addRow" class="addRow">
@@ -127,10 +127,10 @@
                                 </tbody>
                             </table>
                             <br/>
-                            <p>Description</p>
+                            <p>{{ __('messages.Description') }}</p>
                             <div class="form-row">
                                 <div class="form-group col-md-12">
-                                    <textarea name="description" class="form-control" placeholder="description"></textarea>
+                                    <textarea name="description" class="form-control" placeholder="{{ __('messages.Description') }}"></textarea>
                                 </div>
                             </div>
 
@@ -171,10 +171,10 @@
                                     <input type="text" name="name" id="name" class="form-control" placeholder="{{ __('messages.Name') }}">
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <input type="text" name="surname" id="surname" class="form-control" placeholder="Surname">
+                                    <input type="text" name="surname" id="surname" class="form-control" placeholder=" {{ __('messages.Surname') }}">
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <input type="text" name="mobile_no" id="mobile_no" class="form-control" placeholder="Mobile number">
+                                    <input type="text" name="mobile_no" id="mobile_no" class="form-control" placeholder="Mobile">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <input type="text" name="email" id="email" class="form-control" placeholder="Email">

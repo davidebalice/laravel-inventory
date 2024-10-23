@@ -50,7 +50,7 @@
                                             <td>Email: <strong>{{ $payment['customer']['email']}}</td>
                                             </tr>
                                         <tr>
-                                            <td>Description: <strong>{{ $invoice->description}}</strong></td>
+                                            <td>{{ __('messages.Description') }}: <strong>{{ $invoice->description}}</strong></td>
                                         </tr>
                                     </table>
                                     
@@ -62,7 +62,7 @@
                                                 <th class="text-center">{{ __('messages.Category') }}</th>
                                                 <th class="text-center">{{ __('messages.Product') }}</th>
                                                 <th class="text-center">Current stock</th>
-                                                <th class="text-center">Quantity</th>
+                                                <th class="text-center">{{ __('messages.Quantity') }}</th>
                                                 <th class="text-center">Unit Price </th>
                                                 <th class="text-center">Total Price</th>
                                             </tr>

@@ -18,23 +18,23 @@
 
                         <hr />
 
-                        <h4 class="card-title mb-5">Add purchase</h4>
+                        <h4 class="card-title mb-5">{{ __('messages.AddPurchase') }}</h4>
                      
                         
                         <div class="row">
                             <div class="col-md-4 col-lg-3">
                                 <label for="date" class="col-form-label">
-                                    Date
+                                    {{ __('messages.Date') }}
                                 </label>
                                 <input name="date" class="form-control example-text-input" type="date" id="date"> 
                             </div>
 
                             <div class="col-md-4 col-lg-3">
                                 <label for="purchase_no" class="col-form-label">
-                                    Purchase n.
+                                    {{ __('messages.Purchase') }} n.
                                 </label>
                                 <input name="purchase_no" class="form-control example-text-input" type="text" id="purchase_no"> 
-                            </div>    
+                            </div>
 
                             <div class="col-md-4 col-lg-3">
                                 <label for="supplier_id" class="col-form-label">
@@ -95,11 +95,11 @@
                                     <tr>
                                         <th style="width:18%">{{ __('messages.Category') }}</th>
                                         <th style="width:18%">{{ __('messages.Product') }}</th>
-                                        <th style="width:10%">Qty / Kg</th>
+                                        <th style="width:10%">{{ __('messages.Quantity') }} / Kg</th>
                                         <th style="width:10%">Unit price</th>
-                                        <th style="width:18%">Description</th>
+                                        <th style="width:18%">{{ __('messages.Description') }}</th>
                                         <th style="width:12%">Total price</th>
-                                        <th style="width:14%">Action</th>
+                                        <th style="width:14%">{{ __('messages.Manage') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody id="addRow" class="addRow">
@@ -140,20 +140,20 @@
     <td>
         <input type="hidden" name="category_id[]" value="@{{category_id}}">
         @{{ category_name }}
-    </td>    
+    </td>
 
     <td>
         <input type="hidden" name="product_id[]" value="@{{product_id}}">
         @{{ product_name }}
-    </td>  
+    </td>
 
     <td>
         <input type="number" min="1" class="form-control buying_qty text-right" name="buying_qty[]" value="">
-    </td> 
+    </td>
 
     <td>
         <input type="number" class="form-control unit_price text-right" name="unit_price[]" value="@{{product_price}}">
-    </td> 
+    </td>
 
     <td>
         <input type="text" class="form-control" name="description[]" value="">

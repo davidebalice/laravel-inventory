@@ -23,14 +23,13 @@
                                 <h1 class="mb-2 bold mt-3 white">Demo</h1>
                                 <h3 class="mt-2">
                                     <span class="font-size-19 white">
-                                        Inventory Management System
+                                        {{ __('dashboard.message1') }}
                                     </span>
                                 </h3>
                                 <p class="font-size-16 white">
-                                    Demo of an inventory management software, includes basic functionality, 
+                                    {{ __('dashboard.message2') }}
                                     <br />
-                                    such as customer, 
-                                    supplier and purchasing management
+                                    {{ __('dashboard.message3') }}
                                 </p>
                             </div>
                           
@@ -45,13 +44,13 @@
                         <div class="d-flex">
                             <div class="flex-grow-1 text-center">
                                 <p class="font-size-25 bold red mb-2 mt-4">
-                                    Important
+                                    {{ __('dashboard.message4') }}
                                 </p>
                                 <p class="mb-0"><span class="font-size-23 me-2">
-                                    Software is in <b>demo mode</b>
+                                    {{ __('dashboard.message5') }} <b>demo mode</b>
                                 </p>
                                 <p class="mb-0"><span class="font-size-21 me-2">
-                                    Crud operations is not allowed
+                                    {{ __('dashboard.message6') }}
                                 </p>
                             </div>
                         </div>
@@ -139,16 +138,16 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title mb-4">
-                            Latest purchases
+                            {{ __('messages.LatestPurchases') }}
                         </h4>
 
                         <div class="table-responsive">
                             <table id="datatable" class="table table-bordered dt-responsive nowrap dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable_info">
                                 <thead>
                                 <tr role="row">
-                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 10px;" aria-label="Position: activate to sort column ascending">Purchase no.</th>
-                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Date</th>
-                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">QTY</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 10px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Purchase') }} n.</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Date') }}</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Quantity') }}</th>
                                     <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Supplier') }}</th>
                                     <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Category') }}</th>
                                     <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">{{ __('messages.Product') }}</th>

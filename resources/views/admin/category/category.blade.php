@@ -38,7 +38,7 @@
                                         <thead>
                                         <tr role="row">
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 400px;" aria-label="Position: activate to sort column ascending">{{ __('messages.Name') }}</th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">Actions</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">{{ __('messages.Manage') }}</th>
                                         </thead>
 
                                         <tbody>
@@ -63,10 +63,10 @@
                                                 <td>{{ $item->name }}</td>
                                                 <td>
                                                     <a href="{{ route('category.edit',$item->id) }}" class="btn btn-info sm" title="Edit">
-                                                        <i class="fas fa-edit"></i> Edit
+                                                        <i class="fas fa-edit"></i> {{ __('messages.Edit') }}
                                                     </a>
-                                                    <a href="{{ route('category.delete',$item->id) }}" id="delete" class="btn btn-danger sm" title="Delete">
-                                                        <i class="fas fa-trash"></i> Delete
+                                                    <a href="{{ route('category.delete',$item->id) }}" id="delete" class="btn btn-danger sm" title="{{ __('messages.Delete') }}">
+                                                        <i class="fas fa-trash"></i> {{ __('messages.Delete') }}
                                                     </a>
                                                 </td>
                                             </tr>

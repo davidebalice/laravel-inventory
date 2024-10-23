@@ -86,12 +86,12 @@
         <thead>
         <tr>
             <td><strong>Sl </strong></td>
-            <td class="text-center"><strong>Purchase No </strong></td>
+            <td class="text-center"><strong>{{ __('messages.Purchase') }} n. </strong></td>
             <td class="text-center"><strong>Date  </strong>
             </td>
             <td class="text-center"><strong>{{ __('messages.Product') }}</strong>
             </td>
-            <td class="text-center"><strong>Quantity</strong>
+            <td class="text-center"><strong>{{ __('messages.Quantity') }}</strong>
             </td>
             <td class="text-center"><strong>Unit Price  </strong>
             </td>

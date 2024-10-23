@@ -18,7 +18,7 @@
 
                         <hr />
 
-                        <h4 class="card-title mb-5">Add supplier</h4>
+                        <h4 class="card-title mb-5">{{ __('messages.AddSupplier') }}</h4>
                      
                         
                         <form id="frm_data" method="post" action="{{ route('supplier.store')}}" enctype="multipart/form-data">
@@ -38,7 +38,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Surname
+                                    {{ __('messages.Surname') }}
                                 </label>
                                 <div class="form-group col-sm-10">
                                     <input name="surname" class="form-control" type="text" id="example-text-input" value="{{old('surname')}}">
@@ -62,7 +62,7 @@
                                
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Mobile number
+                                    Mobile
                                 </label>
                                 <div class="form-group col-sm-10">
                                     <input name="mobile_no" class="form-control" type="text" id="example-text-input" value="{{old('mobile_no')}}">
@@ -74,7 +74,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Adress
+                                    {{ __('messages.Address') }}
                                 </label>
                                 <div class="form-group col-sm-10">
                                     <input name="address" class="form-control" type="text" id="example-text-input" value="{{old('address')}}">
@@ -86,8 +86,8 @@
 
                             <hr />
 
-                            <a href="#" onclick="$('#frm_data').submit()" class="btn btn-primary waves-effect waves-light primary_bg">            
-                                <i class="fas fa-plus-circle"></i>               
+                            <a href="#" onclick="$('#frm_data').submit()" class="btn btn-primary waves-effect waves-light primary_bg">
+                                <i class="fas fa-plus-circle"></i>
                                 &nbsp;Insert
                             </a>
                         </form>
@@ -123,9 +123,6 @@ $(document).ready(function(){
    $('#frm_data').validate({
     rules:{
         name: {
-            required : true,
-        },
-        surname: {
             required : true,
         },
         email: {

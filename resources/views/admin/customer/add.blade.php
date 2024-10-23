@@ -26,12 +26,12 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                   Image
+                                   {{ __('messages.Image') }}
                                 </label>
                                 <div class="col-sm-10">
                                     <input name="image" id="image"  class="form-control" type="file">
                                     <div class="avatar-xl mt-4 overflow-hidden" style="width:150px">
-                                        <img id="showImage" class="h-100 w-auto justify-content-center" src="{{ asset('upload/no_image.jpg') }}" alt="image">                                   
+                                        <img id="showImage" class="h-100 w-auto justify-content-center" src="{{ asset('upload/no_image.jpg') }}" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Surname
+                                    {{ __('messages.Surname') }}
                                 </label>
                                 <div class="form-group col-sm-10">
                                     <input name="surname" class="form-control" type="text" id="example-text-input" value="{{old('surname')}}">
@@ -74,7 +74,7 @@
                                
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Mobile number
+                                    Mobile
                                 </label>
                                 <div class="form-group col-sm-10">
                                     <input name="mobile_no" class="form-control" type="text" id="example-text-input" value="{{old('mobile_no')}}">
@@ -86,7 +86,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                    Adress
+                                    {{ __('messages.Address') }}
                                 </label>
                                 <div class="form-group col-sm-10">
                                     <input name="address" class="form-control" type="text" id="example-text-input" value="{{old('address')}}">
@@ -98,8 +98,8 @@
 
                             <hr />
 
-                            <a href="#" onclick="$('#frm_data').submit()" class="btn btn-primary waves-effect waves-light primary_bg">            
-                                <i class="fas fa-plus-circle"></i>               
+                            <a href="#" onclick="$('#frm_data').submit()" class="btn btn-primary waves-effect waves-light primary_bg">
+                                <i class="fas fa-plus-circle"></i>
                                 &nbsp;Insert
                             </a>
                         </form>

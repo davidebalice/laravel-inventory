@@ -37,10 +37,10 @@
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable_info">
                                         <thead>
                                         <tr role="row">
-                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 200px;" aria-label="Position: activate to sort column ascending">Surname Name</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 200px;" aria-label="Position: activate to sort column ascending"> {{ __('messages.Surname') }}  {{ __('messages.Name') }}</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Position: activate to sort column ascending">Email</th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">Mobile n.</th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">Actions</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">Mobile</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">{{ __('messages.Manage') }}</th>
                                         </thead>
 
                                         <tbody>
@@ -62,15 +62,15 @@
                                                 @endphp
                                             @endif
                                             <tr class="{{ $class_row }}">
-                                                <td>{{ $item->surname }} {{ $item->name }}</td>
+                                                <td>{{ $item->surname ?? ''}} {{ $item->name ?? ''}}</td>
                                                 <td>{{ $item->email }}</td>
                                                 <td>{{ $item->mobile_no }}</td>
                                                 <td>
-                                                    <a href="{{ route('supplier.edit',$item->id) }}" class="btn btn-info sm" title="Edit">
-                                                        <i class="fas fa-edit"></i> Edit
+                                                    <a href="{{ route('supplier.edit',$item->id) }}" class="btn btn-info sm" title="{{ __('messages.Edit') }}">
+                                                        <i class="fas fa-edit"></i> {{ __('messages.Edit') }}
                                                     </a>
-                                                    <a href="{{ route('supplier.delete',$item->id) }}" id="delete" class="btn btn-danger sm" title="Delete">
-                                                        <i class="fas fa-trash"></i> Delete
+                                                    <a href="{{ route('supplier.delete',$item->id) }}" id="delete" class="btn btn-danger sm" title="{{ __('messages.Delete') }}">
+                                                        <i class="fas fa-trash"></i> {{ __('messages.Delete') }}
                                                     </a>
                                                 </td>
                                             </tr>

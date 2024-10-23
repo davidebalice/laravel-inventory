@@ -78,42 +78,39 @@
                      
                 </div>
                 <div class="">
-<div class="table-responsive">
+                    <div class="table-responsive">
  
 
 
-    <table class="table">
-        <thead>
-        <tr>
-          
-            <td class="text-center"><strong>{{ __('messages.Supplier') }}</strong></td>
-            <td class="text-center"><strong>Unit  </strong>
-            </td>
-            <td class="text-center"><strong>{{ __('messages.Category') }}</strong>
-            </td>
-            <td class="text-center"><strong>{{ __('messages.Product') }}</strong>
-            </td>
-            <td class="text-center"><strong>Stock  </strong>
-            </td>
-            
-            
-        </tr>
-        </thead>
-        <tbody>
-        <!-- foreach ($order->lineItems as $line) or some such thing here -->
+                        <table class="table">
+                            <thead>
+                            <tr>
+                            
+                                <td class="text-center"><strong>{{ __('messages.Supplier') }}</strong></td>
+                                <td class="text-center"><strong>{{ __('messages.Units') }}</strong>
+                                </td>
+                                <td class="text-center"><strong>{{ __('messages.Category') }}</strong>
+                                </td>
+                                <td class="text-center"><strong>{{ __('messages.Product') }}</strong>
+                                </td>
+                                <td class="text-center"><strong>Stock  </strong>
+                                </td>
+                                
+                                
+                            </tr>
+                            </thead>
+                            <tbody>
         
-    
-        
-        <tr>
-         
-         <td class="text-center"> {{ $product['supplier']['name'] }} </td> 
-         <td class="text-center"> {{ $product['unit']['name'] }} </td> 
-         <td class="text-center"> {{ $product['category']['name'] }} </td> 
-         <td class="text-center"> {{ $product->name }} </td> 
-         <td class="text-center"> {{ $product->quantity }} </td> 
-            
-            
-        </tr>
+                                <tr>
+                                
+                                    <td class="text-center"> {{ $product['supplier']['name'] }} </td> 
+                                    <td class="text-center"> {{ $product['unit']['name'] }} </td> 
+                                    <td class="text-center"> {{ $product['category']['name'] }} </td> 
+                                    <td class="text-center"> {{ $product->name }} </td> 
+                                    <td class="text-center"> {{ $product->quantity }} </td> 
+                                    
+                                    
+                                </tr>
        
            
                             </tbody>
@@ -123,7 +120,7 @@
 
         @php
         $date = new DateTime('now', new DateTimeZone('Asia/Dhaka')); 
-        @endphp         
+        @endphp
         <i>Printing Time : {{ $date->format('F j, Y, g:i a') }}</i>   
 
                     <div class="d-print-none">

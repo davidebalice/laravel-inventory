@@ -25,11 +25,11 @@
                             <thead>
                             <tr>
                                 <th>{{ __('messages.Customer') }}</th> 
-                                <th>Invoice No </th>
-                                <th>Date </th>
-                                <th>Desctipion</th>  
+                                <th>{{ __('messages.Invoice') }} n.</th>
+                                <th>{{ __('messages.Date') }}</th>
+                                <th>{{ __('messages.Description') }}</th>
                                 <th>Amount</th>
-                                <th>Action</th>
+                                <th>{{ __('messages.Manage') }}</th>
                             </thead>
 
                             <tbody>

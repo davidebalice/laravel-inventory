@@ -64,7 +64,7 @@ Route::middleware(['auth'])->group(function (){
 
     Route::controller(UnitController::class)->group(function(){
         Route::get('/units', 'Unit')->name('units');
-        Route::get('/unit/add', 'UnitAdd')->name('unit.add');
+        Route::get('/unit/add', 'Add')->name('unit.add');
         Route::post('/unit/store', 'Store')->name('unit.store');
         Route::get('/unit/edit/{id}', 'Edit')->name('unit.edit');   
         Route::get('/unit/delete/{id}', 'Delete')->name('unit.delete');  

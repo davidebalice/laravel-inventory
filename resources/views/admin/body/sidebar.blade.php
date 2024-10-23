@@ -17,7 +17,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route ('suppliers') }}">{{ __('messages.Suppliers') }}</a></li>
-                        <li><a href="{{ route ('supplier.add') }}">Add supplier</a></li>
+                        <li><a href="{{ route ('supplier.add') }}">{{ __('messages.AddSupplier') }}</a></li>
                     </ul>
                 </li>
 
@@ -38,10 +38,10 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-delete-back-fill"></i>
-                        <span>Units</span>
+                        <span>{{ __('messages.Units') }}</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route ('units') }}">Units</a></li>
+                        <li><a href="{{ route ('units') }}">{{ __('messages.Units') }}</a></li>
                         <li><a href="{{ route ('unit.add') }}">Add unit</a></li>
                     </ul>
                 </li>
@@ -71,11 +71,11 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="mdi mdi-file-document"></i>
-                        <span>Purchases</span>
+                        <span>{{ __('messages.Purchases') }}</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route ('purchases') }}">Purchase</a></li>
-                        <li><a href="{{ route ('purchase.add') }}">Add purchase</a></li>
+                        <li><a href="{{ route ('purchases') }}">{{ __('messages.Purchases') }}</a></li>
+                        <li><a href="{{ route ('purchase.add') }}">{{ __('messages.AddPurchase') }}</a></li>
                         <li><a href="{{ route ('purchase.pending') }}">Approval purchase</a></li>
                         <li><a href="{{ route('daily.purchase.report') }}">Daily purchase </a></li>
                     </ul>
@@ -84,10 +84,10 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="mdi mdi-file-document"></i>
-                        <span>Invoices</span>
+                        <span>{{ __('messages.Invoices') }}</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route ('invoices') }}">Invoices</a></li>
+                        <li><a href="{{ route ('invoices') }}">{{ __('messages.Invoices') }}</a></li>
                         <li><a href="{{ route ('invoice.add') }}">Add invoice</a></li>
                         <li><a href="{{ route ('invoice.pending') }}">Approval invoice</a></li>
                         <li><a href="{{ route ('invoice.daily') }}">Daily report</a></li>
@@ -97,18 +97,18 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="fas fa-box"></i>
-                        <span>Manage stock</span>
+                        <span>{{ __('messages.ManageStock') }}</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('stock.report') }}">Stock report</a></li>
-                        <li><a href="{{ route('stock.supplier.wise') }}">{{ __('messages.Supplier') }} / Product Wise </a></li>
+                        <li><a href="{{ route('stock.report') }}">{{ __('messages.ManageStock') }}</a></li>
+                        <li><a href="{{ route('stock.supplier.wise') }}">{{ __('messages.Supplier') }} / {{ __('messages.Product') }} </a></li>
                     </ul>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" >
                         <i class="fas fa-headset"></i>
-                        <span>Support</span>
+                        <span>{{ __('messages.Support') }}</span>
                     </a>
                 </li>
 

@@ -28,7 +28,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                   Short description
+                                   {{ __('messages.Description') }}
                                 </label>
                                 <div class="col-sm-10">
                                     <textarea name="short_description" class="form-control" rows="5" id="elm1">{{ $footer->short_description }}</textarea>
@@ -37,7 +37,7 @@
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">
-                                  Address
+                                    {{ __('messages.Address') }}
                                 </label>
                                 <div class="col-sm-10">
                                     <input name="address" class="form-control" type="text" id="example-text-input" value="{{ $footer->address }}">
@@ -109,9 +109,9 @@
 
                             <hr />
 
-                            <a href="#" onclick="$('#frm_footer').submit()" class="btn btn-primary waves-effect waves-light">            
-                                <i class="fas fa-save"></i>               
-                                &nbsp;Save
+                            <a href="#" onclick="$('#frm_footer').submit()" class="btn btn-primary waves-effect waves-light">
+                                <i class="fas fa-save"></i>
+                                &nbsp;{{ __('messages.Save') }}
                             </a>
                         </form>
 

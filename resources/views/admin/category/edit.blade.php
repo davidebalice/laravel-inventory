@@ -42,7 +42,7 @@
 
                             <a href="#" onclick="$('#frm_data').submit()" class="btn btn-primary waves-effect waves-light primary_bg">
                                 <i class="fas fa-save"></i>
-                                &nbsp;Save
+                                &nbsp;{{ __('messages.Save') }}
                             </a>
                         </form>
 

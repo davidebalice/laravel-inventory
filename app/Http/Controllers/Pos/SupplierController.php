@@ -22,11 +22,9 @@ class SupplierController extends Controller
 
         $request->validate([
             'name' => 'required',
-            'surname' => 'required',
             'email' => 'required'
         ],[
             'name.required' => 'Name is required',
-            'surname.required' => 'Surname is required',
             'email.required' => 'Title is required'
         ]);
 
@@ -60,32 +58,11 @@ class SupplierController extends Controller
 
         $request->validate([
             'name' => 'required',
-            'surname' => 'required',
             'email' => 'required'
         ],[
             'name.required' => 'Name is required',
-            'surname.required' => 'Surname is required',
             'email.required' => 'Email is required'
         ]);
-
-        /*
-        $save_url=$supplier->image;
-        $save_url_home=$supplier->image_home;
-
-        if($request->file('image')) {
-            $image = $request->file('image');
-            $name_gen = hexdec(uniqid()).'.'. $image->getClientOriginalExtension();
-            Image::make($image)->resize(600, null, function ($constraint) {$constraint->aspectRatio();})->save('upload/supplier/'.$name_gen);
-            $save_url = 'upload/supplier/'.$name_gen;
-        } 
-
-        if($request->file('image_home')) {
-            $image = $request->file('image_home');
-            $name_gen_home = hexdec(uniqid()).'_home.'. $image->getClientOriginalExtension();
-            Image::make($image)->resize(1020,519)->save('upload/supplier/'.$name_gen_home);
-            $save_url_home = 'upload/supplier/'.$name_gen_home;
-        } 
-        */
 
         Supplier::findOrFail($id)->update([
             'name' => $request->name,
