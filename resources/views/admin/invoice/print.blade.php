@@ -15,10 +15,10 @@
                 <div class="card">
                     <div class="card-body">
                         <a href="{{ route('invoice.add') }}" class="btn btn-dark btn-rounded waves-effect waves-light" style="float:right;">
-                            <i class="fas fa-plus-circle"> Add Invoice </i></a> 
+                            <i class="fas fa-plus-circle"> {{ __('messages.AddInvoice') }} </i></a> 
                             <br><br>
 
-                        <h4 class="card-title">Invoice Data </h4>
+                        <h4 class="card-title">{{ __('messages.Invoice') }} </h4>
 
 
                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -28,7 +28,7 @@
                                 <th>{{ __('messages.Invoice') }} n.</th>
                                 <th>{{ __('messages.Date') }}</th>
                                 <th>{{ __('messages.Description') }}</th>
-                                <th>Amount</th>
+                                <th>{{ __('messages.Amount') }}</th>
                                 <th>{{ __('messages.Manage') }}</th>
                             </thead>
 

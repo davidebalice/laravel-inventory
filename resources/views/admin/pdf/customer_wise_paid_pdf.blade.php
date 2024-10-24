@@ -6,11 +6,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Customer Wise Paid Report</h4>
+                    <h4 class="mb-sm-0">{{ __('messages.CustomerWisePaidReport') }}</h4>
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);"> </a></li>
-                            <li class="breadcrumb-item active">Customer Wise Paid Report</li>
+                            <li class="breadcrumb-item active">{{ __('messages.CustomerWisePaidReport') }}</li>
                         </ol>
                     </div>
                 </div>
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <div class="card-body">  
+                    <div class="card-body">
                         <div class="row">
                             <div class="col-12">
                                 <div class="invoice-title">
@@ -64,7 +64,7 @@
                                                     </td>
                                                     <td class="text-center"><strong>{{ __('messages.Date') }}</strong>
                                                     </td>
-                                                    <td class="text-center"><strong>Due amount</strong>
+                                                    <td class="text-center"><strong>{{ __('messages.DueAmount') }}</strong>
                                                     </td>
                                                 </tr>
                                                 </thead>
@@ -87,11 +87,11 @@
                                                 @endforeach
             
                                                 <tr>
-                                                    <td class="no-line"></td> 
-                                                    <td class="no-line"></td> 
+                                                    <td class="no-line"></td>
+                                                    <td class="no-line"></td>
                                                     <td class="no-line"></td>
                                                     <td class="no-line text-center">
-                                                        <strong>Grand Due Amount</strong></td>
+                                                        <strong>{{ __('messages.DueAmount') }}</strong></td>
                                                     <td class="no-line text-end"><h4 class="m-0">${{ $total_due}}</h4></td>
                                                 </tr>
                                                 </tbody>

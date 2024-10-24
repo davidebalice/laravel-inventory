@@ -40,44 +40,44 @@
                                         </thead>
 
                                         <tbody>
-                                        @php
-                                            $i=1;
-                                            $class_row="even";
-                                        @endphp
-                                        @foreach ($customers as $item) 
                                             @php
-                                                $i++
+                                                $i=1;
+                                                $class_row="even";
                                             @endphp
-                                            @if($i % 2 == 0)
+                                            @foreach ($customers as $item)
                                                 @php
-                                                    $class_row="even";
+                                                    $i++
                                                 @endphp
-                                            @else
-                                                @php
-                                                    $class_row="odd";
-                                                @endphp
-                                            @endif
-                                            <tr class="{{ $class_row }}">
-                                                <td>
-                                                    @if (file_exists($item->image))
-                                                    <img src="{{ asset($item->image)}}" alt="" style="width:100px">
-                                                    @else
-                                                    <img src="{{ asset('upload/no_image_blog.jpg')}}" alt="" style="width:100px">
-                                                    @endif
-                                                </td>
-                                                <td>{{ $item->surname }} {{ $item->name }}</td>
-                                                <td>{{ $item->email }}</td>
-                                                <td>{{ $item->mobile_no }}</td>
-                                                <td>
-                                                    <a href="{{ route('customer.edit',$item->id) }}" class="btn btn-info sm" title="{{ __('messages.Edit') }}">
-                                                        <i class="fas fa-edit"></i> {{ __('messages.Edit') }}
-                                                    </a>
-                                                    <a href="{{ route('customer.delete',$item->id) }}" id="delete" class="btn btn-danger sm" title="{{ __('messages.Delete') }}">
-                                                        <i class="fas fa-trash"></i> {{ __('messages.Delete') }}
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        @endforeach
+                                                @if($i % 2 == 0)
+                                                    @php
+                                                        $class_row="even";
+                                                    @endphp
+                                                @else
+                                                    @php
+                                                        $class_row="odd";
+                                                    @endphp
+                                                @endif
+                                                <tr class="{{ $class_row }}">
+                                                    <td>
+                                                        @if (file_exists($item->image))
+                                                        <img src="{{ asset($item->image)}}" alt="" style="width:80px">
+                                                        @else
+                                                        <img src="{{ asset('upload/no_image_blog.jpg')}}" alt="" style="width:100px">
+                                                        @endif
+                                                    </td>
+                                                    <td>{{ $item->surname }} {{ $item->name }}</td>
+                                                    <td>{{ $item->email }}</td>
+                                                    <td>{{ $item->mobile_no }}</td>
+                                                    <td>
+                                                        <a href="{{ route('customer.edit',$item->id) }}" class="btn btn-info sm" title="{{ __('messages.Edit') }}">
+                                                            <i class="fas fa-edit"></i> {{ __('messages.Edit') }}
+                                                        </a>
+                                                        <a href="{{ route('customer.delete',$item->id) }}" id="delete" class="btn btn-danger sm" title="{{ __('messages.Delete') }}">
+                                                            <i class="fas fa-trash"></i> {{ __('messages.Delete') }}
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

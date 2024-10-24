@@ -8,7 +8,6 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-
                         <a href="{{ route('customers')}}" class="btn btn-primary waves-effect waves-light primary_bg">
                             <i class="fas fa-arrow-alt-circle-left"></i>
                             &nbsp;{{ __('messages.Back') }}
@@ -16,7 +15,7 @@
 
                         <hr />
 
-                        <h4 class="card-title mb-5">Edit customer</h4>
+                        <h4 class="card-title mb-5">{{ __('messages.EditCustomer') }}</h4> 
                      
                         <form id="frm_data" method="post" action="{{ route('customer.update')}}" enctype="multipart/form-data">
                             @csrf
@@ -102,8 +101,6 @@
                                 &nbsp;{{ __('messages.Save') }}
                             </a>
                         </form>
-
-                  
                     </div>
                 </div>
             </div>

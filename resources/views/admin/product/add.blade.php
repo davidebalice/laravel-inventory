@@ -145,7 +145,7 @@
 
                             <a href="#" onclick="$('#frm_data').submit()" class="btn btn-primary waves-effect waves-light primary_bg">
                                 <i class="fas fa-plus-circle"></i>
-                                &nbsp;Insert
+                                &nbsp;{{ __('messages.Insert') }}
                             </a>
                         </form>
 

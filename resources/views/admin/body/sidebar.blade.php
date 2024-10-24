@@ -29,9 +29,9 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route ('customers') }}">{{ __('messages.Customers') }}</a></li>
                         <li><a href="{{ route ('customer.add') }}">{{ __('messages.AddCustomer') }}</a></li>
-                        <li><a href="{{ route('credit.customer') }}">Credit customers</a></li>
-                        <li><a href="{{ route('paid.customer') }}">Paid customers</a></li>
-                        <li><a href="{{ route('customer.wise.report') }}">Customer Wise Report</a></li>
+                        <li><a href="{{ route('credit.customer') }}">{{ __('messages.CreditCustomers') }}</a></li>
+                        <li><a href="{{ route('paid.customer') }}">{{ __('messages.PaidCustomers') }}</a></li>
+                        <li><a href="{{ route('customer.wise.report') }}">{{ __('messages.CustomerWiseReport') }}</a></li>
                     </ul>
                 </li>
 
@@ -42,7 +42,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route ('units') }}">{{ __('messages.Units') }}</a></li>
-                        <li><a href="{{ route ('unit.add') }}">Add unit</a></li>
+                        <li><a href="{{ route ('unit.add') }}">{{ __('messages.AddUnit') }}</a></li>
                     </ul>
                 </li>
 
@@ -76,8 +76,8 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route ('purchases') }}">{{ __('messages.Purchases') }}</a></li>
                         <li><a href="{{ route ('purchase.add') }}">{{ __('messages.AddPurchase') }}</a></li>
-                        <li><a href="{{ route ('purchase.pending') }}">Approval purchase</a></li>
-                        <li><a href="{{ route('daily.purchase.report') }}">Daily purchase </a></li>
+                        <li><a href="{{ route ('purchase.pending') }}">{{ __('messages.ApprovalPurchase') }}</a></li>
+                        <li><a href="{{ route('daily.purchase.report') }}">{{ __('messages.DailyPurchase') }}</a></li>
                     </ul>
                 </li>
 
@@ -88,7 +88,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route ('invoices') }}">{{ __('messages.Invoices') }}</a></li>
-                        <li><a href="{{ route ('invoice.add') }}">Add invoice</a></li>
+                        <li><a href="{{ route ('invoice.add') }}">{{ __('messages.AddInvoice') }}</a></li>
                         <li><a href="{{ route ('invoice.pending') }}">Approval invoice</a></li>
                         <li><a href="{{ route ('invoice.daily') }}">Daily report</a></li>
                     </ul>

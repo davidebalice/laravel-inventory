@@ -65,7 +65,7 @@
                                                     <td class="text-center"><strong>{{ __('messages.Date') }}</strong>
                                                     </td>
                                                     
-                                                    <td class="text-center"><strong>Due Amount  </strong>
+                                                    <td class="text-center"><strong>{{ __('messages.DueAmount') }}</strong>
                                                     </td>
                                                 </tr>
                                                 </thead>
@@ -92,11 +92,11 @@
                                                     
                                                     
                                                     <tr>
-                                                        <td class="no-line"></td> 
-                                                        <td class="no-line"></td> 
+                                                        <td class="no-line"></td>
+                                                        <td class="no-line"></td>
                                                         <td class="no-line"></td>
                                                         <td class="no-line text-center">
-                                                            <strong>Grand Due Amount</strong></td>
+                                                            <strong>{{ __('messages.DueAmount') }}</strong></td>
                                                         <td class="no-line text-end"><h4 class="m-0">${{ $total_due}}</h4></td>
                                                     </tr>
                                                 </tbody>
@@ -104,9 +104,9 @@
                                         </div>
 
                                         @php
-                                            $date = new DateTime('now', new DateTimeZone('Asia/Dhaka')); 
+                                            $date = new DateTime('now', new DateTimeZone('Asia/Dhaka'));
                                         @endphp
-                                        <i>Printing Time : {{ $date->format('F j, Y, g:i a') }}</i>   
+                                        <i>Printing Time : {{ $date->format('F j, Y, g:i a') }}</i>
 
                                         <div class="d-print-none">
                                             <div class="float-end">

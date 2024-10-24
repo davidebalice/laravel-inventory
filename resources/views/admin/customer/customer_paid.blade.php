@@ -27,7 +27,7 @@
                                 <th>{{ __('messages.Customer') }}</th>
                                 <th>{{ __('messages.Invoice') }} n. </th>
                                 <th>{{ __('messages.Date') }}</th>
-                                <th>Due Amount</th>
+                                <th>{{ __('messages.DueAmount') }}</th>
                                 <th>{{ __('messages.Manage') }}</th>
                             </thead>
 

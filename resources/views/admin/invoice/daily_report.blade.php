@@ -13,14 +13,14 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="md-3 form-group">
-                                        <label for="example-text-input" class="form-label">Start Date</label>
+                                        <label for="example-text-input" class="form-label">{{ __('messages.StartDate') }}</label>
                                         <input class="form-control example-date-input" name="start_date" type="date"  id="start_date" placeholder="YY-MM-DD">
                                     </div>
                                 </div>
 
                                 <div class="col-md-4">
                                     <div class="md-3 form-group">
-                                        <label for="example-text-input" class="form-label">End Date</label>
+                                        <label for="example-text-input" class="form-label">{{ __('messages.EndDate') }}</label>
                                         <input class="form-control example-date-input" name="end_date" type="date"  id="end_date" placeholder="YY-MM-DD">
                                     </div>
                                 </div>
@@ -28,18 +28,17 @@
                                 <div class="col-md-4">
                                     <div class="md-3">
                                         <label for="example-text-input" class="form-label" style="margin-top:43px;"> </label>
-                                    <button type="submit" class="btn btn-info">Search</button>
+                                    <button type="submit" class="btn btn-info">{{ __('messages.Search') }}</button>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </form>
-                    </div> 
+                    </div>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
 </div>
-
 
 <script type="text/javascript">
     $(document).ready(function (){
@@ -78,4 +77,4 @@
     
 </script>
 
-@endsection 
+@endsection

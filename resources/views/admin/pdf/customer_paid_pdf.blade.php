@@ -68,7 +68,7 @@
                                                     <td class="text-center"><strong>{{ __('messages.Date') }}</strong>
                                                     </td>
                                                     
-                                                    <td class="text-center"><strong>Due Amount  </strong>
+                                                    <td class="text-center"><strong>{{ __('messages.DueAmount') }}</strong>
                                                     </td>
                                                 </tr>
                                                 </thead>

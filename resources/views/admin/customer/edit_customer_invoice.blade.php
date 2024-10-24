@@ -6,12 +6,12 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Customer invoice</h4>
+                    <h4 class="mb-sm-0">{{ __('messages.CustomerInvoice') }}</h4>
 
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);"> </a></li>
-                            <li class="breadcrumb-item active">Customer invoice</li>
+                            <li class="breadcrumb-item active">{{ __('messages.CustomerInvoice') }}</li>
                         </ol>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                             <div class="col-12">
                                 <div>
                                     <div class="p-2">
-                                        <h3 class="font-size-16"><strong>Customer Invoice ( Invoice No: #{{ $payment['invoice']['invoice_no'] }} ) </strong></h3>
+                                        <h3 class="font-size-16"><strong>{{ __('messages.CustomerInvoice') }} ( Invoice n.: #{{ $payment['invoice']['invoice_no'] }} ) </strong></h3>
                                     </div>
                                     <div class="">
                                         <div class="table-responsive">
@@ -145,7 +145,7 @@
                                                             <td class="no-line"></td>
                                                             <td class="no-line"></td>
                                                             <td class="no-line text-center">
-                                                                <strong>Due Amount</strong>
+                                                                <strong>{{ __('messages.DueAmount') }}</strong>
                                                             </td>
                                                             <input type="hidden" name="new_paid_amount" value="{{$payment->due_amount}}">
                                                             <td class="no-line text-end">${{ $payment->due_amount }}</td>
@@ -158,7 +158,7 @@
                                                             <td class="no-line"></td>
                                                             <td class="no-line"></td>
                                                             <td class="no-line text-center">
-                                                                <strong>Grand Amount</strong>
+                                                                <strong>{{ __('messages.GrandAmount') }}</strong>
                                                             </td>
                                                             <td class="no-line text-end"><h4 class="m-0">${{ $payment->total_amount }}</h4></td>
                                                         </tr>

@@ -33,7 +33,7 @@
                             </div>
                         </div>
     
-                        <h4 class="text-muted text-center font-size-18"><b>Sign In</b></h4>
+                        <h4 class="text-muted text-center font-size-18"><b>Laravel Inventory</b></h4>
     
                         <div class="p-3">
                             

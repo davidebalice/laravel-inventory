@@ -3030,7 +3030,11 @@ div.dt-button-info h2 {
     background-color: #f8f9fa;
 }
 .table-bordered {
-    border: 1px solid #eff2f7;
+    border: 1px solid #ddd;
+    border-radius: 6px !important;
+}
+.table-bordered th {
+    background-color: #f3f3f3;
 }
 .table.dataTable.dtr-inline.collapsed > tbody > tr > td,
 table.dataTable.dtr-inline.collapsed > tbody > tr > td {
@@ -3893,9 +3897,9 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
     background: url("/backend/assets/images/bg3.jpg") !important;
     background-size: 100% auto;
 }
-.white{
-    color:#fff;
+.white {
+    color: #fff;
 }
-.red{
-    color:#ff0000
+.red {
+    color: #ff0000;
 }

@@ -4,8 +4,6 @@
 
 <div class="page-content">
     <div class="container-fluid">
-
-       
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -19,8 +17,7 @@
                         <hr />
 
                         <h4 class="card-title mb-5">{{ __('messages.AddPurchase') }}</h4>
-                     
-                        
+                                        
                         <div class="row">
                             <div class="col-md-4 col-lg-3">
                                 <label for="date" class="col-form-label">
@@ -80,10 +77,8 @@
                                     <i class="fas fa-plus-circle"> </i>
                                     &nbsp;
                                     Add
-                                </div>   
-                                 
-                            </div>  
-
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -120,11 +115,11 @@
                             </table>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-info primary_color mt-4">Purchase store</button>
-                            </div>   
+                            </div>
                         </form>
-                    </div>   
+                    </div>
                 </div>
-            </div> <!-- end col -->
+            </div>
         </div>
     </div>
 </div>
@@ -338,5 +333,6 @@ $(document).ready(function(){
     },
    });
 });
-</script>    
+</script>
+
 @endsection

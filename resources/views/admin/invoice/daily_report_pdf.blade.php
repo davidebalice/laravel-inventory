@@ -83,7 +83,7 @@
                                                     </td>
                                                     <td class="text-center"><strong>{{ __('messages.Description') }}</strong>
                                                     </td>
-                                                    <td class="text-center"><strong>Amount  </strong>
+                                                    <td class="text-center"><strong>{{ __('messages.Amount') }}</strong>
                                                     </td>
                                                 </tr>
                                                 </thead>
@@ -110,7 +110,7 @@
                                                             <td class="no-line"></td> 
                                                             <td class="no-line"></td>
                                                             <td class="no-line text-center">
-                                                                <strong>Grand Amount</strong></td>
+                                                                <strong>{{ __('messages.GrandAmount') }}</strong></td>
                                                             <td class="no-line text-end"><h4 class="m-0">${{ $total_sum}}</h4></td>
                                                         </tr>
                                                 </tbody>

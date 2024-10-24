@@ -15,7 +15,7 @@
 
                         <hr />
 
-                        <h4 class="card-title mb-5">Add invoice</h4>
+                        <h4 class="card-title mb-5">{{ __('messages.AddInvoice') }}</h4>
                         
                         <div class="row">
                             <div class="col-md-2 col-lg-1">
@@ -36,12 +36,12 @@
 
                             <div class="col-md-2 col-lg-2">
                                 <label for="current_stock_qty" class="col-form-label">
-                                    Stock (Pic/Kg)
+                                    {{ __('messages.Stock') }} (Qt.)
                                 </label>
                                 <input name="current_stock_qty" class="form-control example-text-input" type="text" id="current_stock_qty" readonly style="background: #f1f1f1">
                             </div> 
                             
-                            <div class="col-md-4 col-lg-2">  
+                            <div class="col-md-4 col-lg-2">
                                 {{--
                                 
                                 <input class="btn btn-dark  waves-effect waves-light mb-3 primary_bg" type="submit" id="invoice_no" value=" Add " > 
@@ -153,8 +153,8 @@
                                         {{ __('messages.Customer') }}
                                     </label>
                                     <select name="customer_id" id="customer_id" class="form-select">
-                                        <option value="">Select customer</option>
-                                        <option value="0"> + New customer</option>
+                                        <option value="">{{ __('messages.SelectCustomer') }}</option>
+                                        <option value="0"> + {{ __('messages.AddCustomer') }}</option>
                                         @foreach ($customers as $item)
                                         <option value="{{$item->id}}">{{$item->surname}} {{$item->name}}</option>
                                         @endforeach

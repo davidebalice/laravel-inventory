@@ -105,12 +105,12 @@
                                             </tr>
                                     
                                             <tr>
-                                                <td colspan="6"> Due Amount </td>
+                                                <td colspan="6"> {{ __('messages.DueAmount') }} </td>
                                                 <td > {{ $payment->due_amount }} </td>
                                             </tr>
                                     
                                             <tr>
-                                                <td colspan="6"> Grand Amount </td>
+                                                <td colspan="6"> {{ __('messages.GrandAmount') }} </td>
                                                 <td >{{ $payment->total_amount }}</td>
                                             </tr>
                                         </tbody>

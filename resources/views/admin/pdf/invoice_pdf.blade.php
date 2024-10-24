@@ -45,7 +45,7 @@
                                     </div>
                                     <div class="col-6 mt-4 text-end">
                                         <address>
-                                            <strong>Invoice Date:</strong><br>
+                                            <strong>{{ __('messages.Date') }}:</strong><br>
                                             {{ date('d-m-Y',strtotime($invoice->date)) }} <br><br>
                                         </address>
                                     </div>
@@ -61,7 +61,7 @@
                             <div class="col-12">
                                 <div>
                                     <div class="p-2">
-                                        <h3 class="font-size-16"><strong>Customer Invoice</strong></h3>
+                                        <h3 class="font-size-16"><strong>{{ __('messages.CustomerInvoice') }}</strong></h3>
                                     </div>
                                     <div class="">
                                         <div class="table-responsive">
@@ -182,7 +182,7 @@
                                     <td class="no-line"></td>
                                     <td class="no-line"></td>
                                     <td class="no-line text-center">
-                                        <strong>Due Amount</strong></td>
+                                        <strong>{{ __('messages.DueAmount') }}</strong></td>
                                     <td class="no-line text-end">${{ $payment->due_amount }}</td>
                                 </tr>
                                 <tr>
@@ -192,7 +192,7 @@
                                     <td class="no-line"></td>
                                     <td class="no-line"></td>
                                     <td class="no-line text-center">
-                                        <strong>Grand Amount</strong></td>
+                                        <strong>{{ __('messages.GrandAmount') }}</strong></td>
                                     <td class="no-line text-end"><h4 class="m-0">${{ $payment->total_amount }}</h4></td>
                                 </tr>
                                         </tbody>

@@ -6,12 +6,12 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Supplier Wise Stock Report</h4>
+                    <h4 class="mb-sm-0">{{ __('messages.SupplierWiseStockReport') }}</h4>
 
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);"> </a></li>
-                            <li class="breadcrumb-item active">Supplier Wise Stock Report</li>
+                            <li class="breadcrumb-item active">{{ __('messages.SupplierWiseStockReport') }}</li>
                         </ol>
                     </div>
 
@@ -82,40 +82,30 @@
                                                     </td>
                                                     <td class="text-center"><strong>{{ __('messages.Product') }}</strong>
                                                     </td>
-                                                    <td class="text-center"><strong>Stock  </strong>
+                                                    <td class="text-center"><strong>{{ __('messages.Stock') }}</strong>
                                                     </td>
-                                                    
-                                                    
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <!-- foreach ($order->lineItems as $line) or some such thing here -->
-                                                
                                             
                                                 @foreach($allData as $key => $item)
                                                 <tr>
-                                                <td class="text-center"> {{ $key+1}} </td> 
-                                                <td class="text-center"> {{ $item['supplier']['name'] }} </td> 
-                                                <td class="text-center"> {{ $item['unit']['name'] }} </td> 
-                                                <td class="text-center"> {{ $item['category']['name'] }} </td> 
-                                                <td class="text-center"> {{ $item->name }} </td> 
-                                                <td class="text-center"> {{ $item->quantity }} </td> 
-                                                    
-                                                    
+                                                    <td class="text-center"> {{ $key+1}} </td>
+                                                    <td class="text-center"> {{ $item['supplier']['name'] ?? '' }} </td>
+                                                    <td class="text-center"> {{ $item['unit']['name'] ?? '' }} </td>
+                                                    <td class="text-center"> {{ $item['category']['name'] ?? '' }} </td>
+                                                    <td class="text-center"> {{ $item->name ?? '' }} </td>
+                                                    <td class="text-center"> {{ $item->quantity ?? '' }} </td>
                                                 </tr>
-                                                
-                                                @endforeach 
-           
-           
+                                                @endforeach
                                             </tbody>
                                             </table>
                                         </div>
 
-
                                         @php
-                                        $date = new DateTime('now', new DateTimeZone('Asia/Dhaka')); 
-                                        @endphp         
-                                        <i>Printing Time : {{ $date->format('F j, Y, g:i a') }}</i>   
+                                        $date = new DateTime('now', new DateTimeZone('Asia/Dhaka'));
+                                        @endphp
+                                        <i>Printing Time : {{ $date->format('F j, Y, g:i a') }}</i>
 
                                         <div class="d-print-none">
                                             <div class="float-end">

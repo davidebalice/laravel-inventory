@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Customer wise report </h4>
+                    <h4 class="mb-sm-0">{{ __('messages.CustomerWiseReport') }}</h4>
                 </div>
             </div>
         </div>
@@ -18,11 +18,11 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <strong> Customer Wise Credit Report </strong>
+                                <strong> {{ __('messages.CustomerWiseCreditReport') }} </strong>
                                 <input type="radio" name="customer_wise_report" value="customer_wise_credit" class="search_value"> &nbsp;&nbsp;
-                                <strong> Customer Wise Paid Report </strong>
+                                <strong> {{ __('messages.CustomerWisePaidReport') }} </strong>
                                 <input type="radio" name="customer_wise_report" value="customer_wise_paid" class="search_value">
-                            </div>        
+                            </div>
                         </div>
 
                         <div class="show_credit" style="display:none">
@@ -31,35 +31,35 @@
                                     <div class="col-sm-8 form-group">
                                         <label>{{ __('messages.Customer') }}</label>
                                         <select name="customer_id" class="form-select select2"  >
-                                            <option value="">Select Customer</option>
-                                            @foreach($customers as $cus)
-                                                <option value="{{ $cus->id }}">{{ $cus->name }}</option>
-                                            @endforeach
-                                        </select>                    
-                                    </div>
-                                    <div class="col-sm-4" style="padding-top: 28px;">
-                                        <button type="submit" class="btn btn-primary">Search</button>
-                                    </div>           
-                                </div>           
-                            </form>       
-                        </div>
-
-                        <div class="show_paid" style="display:none">
-                            <form method="GET" action="{{ route('customer.wise.paid.report') }}" id="myForm" target="_blank" >
-                                <div class="row">
-                                    <div class="col-sm-8 form-group">
-                                        <label>{{ __('messages.Cusomer') }} </label>
-                                        <select name="customer_id" class="form-select select2"  >
-                                            <option value="">Select Customer</option>
+                                            <option value="">{{ __('messages.SelectCustomer') }}</option>
                                             @foreach($customers as $cus)
                                                 <option value="{{ $cus->id }}">{{ $cus->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="col-sm-4" style="padding-top: 28px;">
-                                        <button type="submit" class="btn btn-primary">Search</button>
-                                    </div>         
-                                </div>       
+                                        <button type="submit" class="btn btn-primary">{{ __('messages.Search') }}</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="show_paid" style="display:none">
+                            <form method="GET" action="{{ route('customer.wise.paid.report') }}" id="myForm" target="_blank" >
+                                <div class="row">
+                                    <div class="col-sm-8 form-group">
+                                        <label>{{ __('messages.Customer') }}</label>
+                                        <select name="customer_id" class="form-select select2"  >
+                                            <option value="">{{ __('messages.SelectCustomer') }}</option>
+                                            @foreach($customers as $cus)
+                                                <option value="{{ $cus->id }}">{{ $cus->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4" style="padding-top: 28px;">
+                                        <button type="submit" class="btn btn-primary">{{ __('messages.Search') }}</button>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -68,9 +68,6 @@
         </div>
     </div>
 </div>
-
- 
-
 
 <script type="text/javascript">
     $(document).on('change','.search_value', function(){
@@ -91,7 +88,7 @@
         }else{
             $('.show_paid').hide();
         }
-    }); 
+    });
 </script>
 
 @endsection

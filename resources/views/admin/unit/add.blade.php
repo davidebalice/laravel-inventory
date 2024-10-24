@@ -4,13 +4,10 @@
 
 <div class="page-content">
     <div class="container-fluid">
-
-       
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-
                         <a href="{{ route('units')}}" class="btn btn-primary waves-effect waves-light primary_bg">
                             <i class="fas fa-arrow-alt-circle-left"></i>
                             &nbsp;{{ __('messages.Back') }}
@@ -18,8 +15,7 @@
 
                         <hr />
 
-                        <h4 class="card-title mb-5">Add unit</h4>
-                     
+                        <h4 class="card-title mb-5">{{ __('messages.AddUnit') }}</h4>
                         
                         <form id="frm_data" method="post" action="{{ route('unit.store')}}" enctype="multipart/form-data">
                             @csrf
@@ -36,40 +32,16 @@
                                 </div>
                             </div>
 
-                        
-
-                          
-
                             <hr />
 
-                            <a href="#" onclick="$('#frm_data').submit()" class="btn btn-primary waves-effect waves-light primary_bg">            
-                                <i class="fas fa-plus-circle"></i>               
-                                &nbsp;Insert
+                            <a href="#" onclick="$('#frm_data').submit()" class="btn btn-primary waves-effect waves-light primary_bg">
+                                <i class="fas fa-plus-circle"></i>
+                                &nbsp;{{ __('messages.Insert') }}
                             </a>
                         </form>
-
-                        
-                        <!--
-
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label">Select</label>
-                            <div class="col-sm-10">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected="">Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                    </select>
-                            </div>
-                        </div>
-                       
-                        -->
-
-
-
                     </div>
                 </div>
-            </div> <!-- end col -->
+            </div>
         </div>
     </div>
 </div>
@@ -112,5 +84,6 @@ $(document).ready(function(){
     },
    });
 });
-</script>    
+</script>
+
 @endsection
