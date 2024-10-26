@@ -3,16 +3,15 @@
 
 <div class="page-content">
     <div class="container-fluid">
-
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Daily Invoice Report</h4>
+                    <h4 class="mb-sm-0">{{ __('messages.DailyInvoiceReport') }}</h4>
 
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);"> </a></li>
-                            <li class="breadcrumb-item active">Daily Invoice Report</li>
+                            <li class="breadcrumb-item active">{{ __('messages.DailyInvoiceReport') }}</li>
                         </ol>
                     </div>
 
@@ -27,7 +26,6 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="invoice-title">
-                                    
                                     <h3>
                                         <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo" height="24"/> Shopping Demo
                                     </h3>
@@ -54,7 +52,7 @@
                             <div class="col-12">
                                 <div>
                                     <div class="p-2">
-                                        <h3 class="font-size-16"><strong>Daily Invoice Report 
+                                        <h3 class="font-size-16"><strong>{{ __('messages.DailyInvoiceReport') }}
                                         <span class="btn btn-info"> {{ date('d-m-Y',strtotime($start_date)) }} </span> -
                                         <span class="btn btn-success"> {{ date('d-m-Y',strtotime($end_date)) }} </span>
                                         </strong></h3>
@@ -109,11 +107,11 @@
                                                         <tr>
                                                             <td class="no-line"></td>
                                                             <td class="no-line"></td>
-                                                            <td class="no-line"></td> 
+                                                            <td class="no-line"></td>
                                                             <td class="no-line"></td>
                                                             <td class="no-line text-center">
                                                                 <strong>{{ __('messages.GrandAmount') }}</strong></td>
-                                                            <td class="no-line text-end"><h4 class="m-0">${{ $total_sum}}</h4></td>
+                                                            <td class="no-line text-end"><h4 class="m-0">€ {{ $total_sum}}</h4></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

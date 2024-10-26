@@ -75,9 +75,9 @@
                                                 <td>{{ $item->product->name ?? 'None' }}</td>
                                                 <td>
                                                     @if ($item->status == 0)
-                                                    <span class="btn btn-warning">Pending</span> 
+                                                    <span class="btn btn-warning">{{ __('messages.Pending') }}</span> 
                                                     @elseif ($item->status == 1)
-                                                    <span class="btn btn-success">Approved</span>
+                                                    <span class="btn btn-success">{{ __('messages.Approved') }}</span>
                                                     @endif
                                                 </td>
                                                 <td>

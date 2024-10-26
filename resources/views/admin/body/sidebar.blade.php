@@ -89,8 +89,8 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route ('invoices') }}">{{ __('messages.Invoices') }}</a></li>
                         <li><a href="{{ route ('invoice.add') }}">{{ __('messages.AddInvoice') }}</a></li>
-                        <li><a href="{{ route ('invoice.pending') }}">Approval invoice</a></li>
-                        <li><a href="{{ route ('invoice.daily') }}">Daily report</a></li>
+                        <li><a href="{{ route ('invoice.pending') }}">{{ __('messages.ApprovalInvoice') }}</a></li>
+                        <li><a href="{{ route ('invoice.daily') }}">{{ __('messages.DailyReport') }}</a></li>
                     </ul>
                 </li>
 

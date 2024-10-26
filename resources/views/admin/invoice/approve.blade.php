@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Invoice approve</h4>
+                    <h4 class="mb-sm-0">{{ __('messages.ApprovalInvoice') }}</h4>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
                         <a href="{{route('invoice.pending')}}" class="btn btn-dark  waves-effect waves-light mb-3 primary_bg">
                             <i class="fas fa-list"> </i>
                             &nbsp;
-                            Invoices pending list
+                            {{ __('messages.ApprovalInvoice') }}
                         </a>
                         
                         @php
@@ -32,10 +32,10 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <br/>
-                                    <h4>Invoice no: {{$invoice->invoice_no}} - {{date('d/m/Y', strtotime($invoice->date))}}</h4>
+                                    <h4>{{ __('messages.Invoice') }} n.: {{$invoice->invoice_no}} - {{date('d/m/Y', strtotime($invoice->date))}}</h4>
                                 </div>
                                 <form method="post" action="{{ route('approval.store',$invoice->id) }}">
-                                     @csrf  
+                                     @csrf
                                      <table border="0" class="table table-light" width="100%">
                                         <tr>
                                             <td><strong>{{ __('messages.Customer') }}</strong></td>
@@ -61,10 +61,10 @@
                                             <tr>
                                                 <th class="text-center">{{ __('messages.Category') }}</th>
                                                 <th class="text-center">{{ __('messages.Product') }}</th>
-                                                <th class="text-center">Current stock</th>
+                                                <th class="text-center">{{ __('messages.Stock') }}</th>
                                                 <th class="text-center">{{ __('messages.Quantity') }}</th>
-                                                <th class="text-center">Unit Price </th>
-                                                <th class="text-center">Total Price</th>
+                                                <th class="text-center">{{ __('messages.UnitPrice') }}</th>
+                                                <th class="text-center">{{ __('messages.TotalPrice') }}</th>
                                             </tr>
                             
                                         </thead>
@@ -91,16 +91,16 @@
                                             @endforeach
                                             
                                             <tr>
-                                                <td colspan="6"> Sub Total </td>
+                                                <td colspan="6"> {{ __('messages.Subtotal') }} </td>
                                                 <td > {{ $total_sum }} </td>
                                             </tr>
                                             <tr>
-                                                <td colspan="6"> Discount </td>
+                                                <td colspan="6"> {{ __('messages.Discount') }} </td>
                                                 <td > {{ $payment->discount_amount }} </td>
                                             </tr>
                                     
                                             <tr>
-                                                <td colspan="6"> Paid Amount </td>
+                                                <td colspan="6"> {{ __('messages.PaidAmount') }} </td>
                                                 <td >{{ $payment->paid_amount }} </td>
                                             </tr>
                                     
@@ -115,7 +115,7 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <button type="submit" class="btn btn-info">Invoice Approve </button>
+                                    <button type="submit" class="btn btn-info">{{ __('messages.InvoiceApprove') }} </button>
                             </form>
                         </div>
                     </div>

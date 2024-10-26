@@ -8,7 +8,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Daily Invoice Report </h4><br><br>
+                        <h4 class="card-title">{{ __('messages.DailyInvoiceReport') }}</h4><br><br>
                         <form method="GET" action="{{ route('daily.invoice.pdf') }}" target="_blank" id="myForm">
                             <div class="row">
                                 <div class="col-md-4">

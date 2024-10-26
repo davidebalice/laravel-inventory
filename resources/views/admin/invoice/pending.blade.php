@@ -8,26 +8,19 @@
 </style>
 <div class="page-content">
     <div class="container-fluid">
-
-        <!-- start page title -->
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Invoices approval list</h4>
+                    <h4 class="mb-sm-0">{{ __('messages.ApprovalInvoice') }}</h4>
                 </div>
             </div>
         </div>
-        <!-- end page title -->
         
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-
-
-
                         <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                           
                             <div class="row">
                                 <div class="col-sm-12">
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable_info">
@@ -48,7 +41,7 @@
                                             $i=1;
                                             $class_row="even";
                                         @endphp
-                                        @foreach ($invoices as $item) 
+                                        @foreach ($invoices as $item)
                                             @php
                                                 $i++
                                             @endphp
@@ -70,9 +63,9 @@
                                                 
                                                 <td>
                                                     @if ($item->status == 0)
-                                                    <span class="btn btn-warning">Pending</span> 
+                                                    <span class="btn btn-warning">{{ __('messages.Pending') }}</span> 
                                                     @elseif ($item->status == 1)
-                                                    <span class="btn btn-success">Approved</span>
+                                                    <span class="btn btn-success">{{ __('messages.Approved') }}</span>
                                                     @endif
                                                 </td>
                                                                                                                                  
@@ -83,8 +76,8 @@
                                                     </a>
                                                     --}}
                                                     @if ($item->status == 0)
-                                                    <a href="{{ route('invoice.approve',$item->id) }}" id="approve" class="btn btn-dark sm" title="Approve">
-                                                        <i class="fas fa-check-circle"></i> Approve
+                                                    <a href="{{ route('invoice.approve',$item->id) }}" id="approve" class="btn btn-dark sm" title="{{ __('messages.Approve') }}">
+                                                        <i class="fas fa-check-circle"></i> {{ __('messages.Approve') }}
                                                     </a>
                                                     <a href="{{ route('invoice.delete',$item->id) }}" id="delete" class="btn btn-danger sm" title="{{ __('messages.Delete') }}">
                                                         <i class="fas fa-trash"></i> {{ __('messages.Delete') }}
@@ -100,14 +93,11 @@
                         <div class="row">
                             {{ $invoices->links() }}
                         </div>
-
                     </div>
                 </div>
-            </div> <!-- end col -->
-        </div> <!-- end row -->
-
-    </div> <!-- container-fluid -->
+            </div>
+        </div>
+    </div>
 </div>
-
 
 @endsection

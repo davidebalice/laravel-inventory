@@ -32,7 +32,7 @@
 
                                 <div class="row">
                                     <div class="col-6 mt-4">
-                                        <h4 class="font-size-16"><strong>Invoice No # {{ $invoice->invoice_no }}</strong></h4>
+                                        <h4 class="font-size-16"><strong>{{ __('messages.Invoice') }} n. # {{ $invoice->invoice_no }}</strong></h4>
                                         <strong>{{ __('messages.Date') }}:</strong><br>
                                         {{ date('d-m-Y',strtotime($invoice->date)) }} <br><br>
                                     </div>
@@ -98,9 +98,9 @@
                                                     </td>
                                                     <td class="text-center"><strong>{{ __('messages.Quantity') }}</strong>
                                                     </td>
-                                                    <td class="text-center"><strong>Unit Price </strong>
+                                                    <td class="text-center"><strong>{{ __('messages.UnitPrice') }}</strong>
                                                     </td>
-                                                    <td class="text-center"><strong>Total Price</strong>
+                                                    <td class="text-center"><strong>{{ __('messages.TotalPrice') }}</strong>
                                                     </td>
                                                 </tr>
                                                 </thead>
@@ -137,7 +137,7 @@
                                                     <td class="thick-line"></td>
                                                     <td class="thick-line"></td>
                                                     <td class="thick-line text-center">
-                                                        <strong>Subtotal</strong></td>
+                                                        <strong>{{ __('messages.Subtotal') }}</strong></td>
                                                         @php
                                                         if($total_sum>0.1)$total_sum = number_format($total_sum,2,",",".");
                                                         @endphp
@@ -150,7 +150,7 @@
                                                         <td class="no-line"></td>
                                                     <td class="no-line"></td>
                                                     <td class="no-line text-center">
-                                                        <strong>Discount Amount</strong></td>
+                                                        <strong>{{ __('messages.DiscountAmount') }}</strong></td>
                                                         @php
                                                         if($payment->discount_amount>0.1)$payment->discount_amount = number_format($payment->discount_amount,2,",",".");
                                                         @endphp
@@ -163,7 +163,7 @@
                                                         <td class="no-line"></td>
                                                     <td class="no-line"></td>
                                                     <td class="no-line text-center">
-                                                        <strong>Paid Amount</strong></td>
+                                                        <strong>{{ __('messages.PaidAmount') }}</strong></td>
                                                         @php
                                                         if($payment->paid_amount>0.1)$payment->paid_amount = number_format($payment->paid_amount,2,",",".");
                                                         @endphp

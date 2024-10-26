@@ -7,7 +7,6 @@
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                     <h4 class="mb-sm-0">{{ __('messages.CustomerInvoice') }}</h4>
-
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);"> </a></li>
@@ -60,7 +59,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <form method="post" action="{{ route('customer.update.invoice',$payment->invoice_id)}}">
-                                    @csrf     
+                                    @csrf
                                     <div>
                                         <div class="p-2">
                                                 
@@ -74,13 +73,13 @@
                                                         <td class="text-center"><strong>{{ __('messages.Category') }}</strong></td>
                                                         <td class="text-center"><strong>{{ __('messages.Product') }}</strong>
                                                         </td>
-                                                        <td class="text-center"><strong>Current stock</strong>
+                                                        <td class="text-center"><strong>{{ __('messages.Stock') }}</strong>
                                                         </td>
                                                         <td class="text-center"><strong>{{ __('messages.Quantity') }}</strong>
                                                         </td>
-                                                        <td class="text-center"><strong>Unit price </strong>
+                                                        <td class="text-center"><strong>{{ __('messages.UnitPrice') }}</strong>
                                                         </td>
-                                                        <td class="text-center"><strong>Total price</strong>
+                                                        <td class="text-center"><strong>{{ __('messages.TotalPrice') }}</strong>
                                                         </td>
                                                         
                                                     </tr>
@@ -111,9 +110,9 @@
                                                             <td class="thick-line"></td>
                                                             <td class="thick-line"></td>
                                                             <td class="thick-line text-center">
-                                                                <strong>Subtotal</strong>
+                                                                <strong>{{ __('messages.Subtotal') }}</strong>
                                                             </td>
-                                                            <td class="thick-line text-end">${{ $total_sum }}</td>
+                                                            <td class="thick-line text-end">€ {{ $total_sum }}</td>
                                                         </tr>
                                                         <tr>
                                                             <td class="no-line"></td>
@@ -122,9 +121,9 @@
                                                             <td class="no-line"></td>
                                                             <td class="no-line"></td>
                                                             <td class="no-line text-center">
-                                                                <strong>Discount Amount</strong>
+                                                                <strong>{{ __('messages.DiscountAmount') }}</strong>
                                                             </td>
-                                                            <td class="no-line text-end">${{ $payment->discount_amount }}</td>
+                                                            <td class="no-line text-end">€ {{ $payment->discount_amount }}</td>
                                                         </tr>
                                                         <tr>
                                                             <td class="no-line"></td>
@@ -133,9 +132,9 @@
                                                             <td class="no-line"></td>
                                                             <td class="no-line"></td>
                                                             <td class="no-line text-center">
-                                                                <strong>Paid Amount</strong>
+                                                                <strong>{{ __('messages.PaidAmount') }}</strong>
                                                             </td>
-                                                            <td class="no-line text-end">${{ $payment->paid_amount }}</td>
+                                                            <td class="no-line text-end">€ {{ $payment->paid_amount }}</td>
                                                         </tr>
 
                                                         <tr>
@@ -148,7 +147,7 @@
                                                                 <strong>{{ __('messages.DueAmount') }}</strong>
                                                             </td>
                                                             <input type="hidden" name="new_paid_amount" value="{{$payment->due_amount}}">
-                                                            <td class="no-line text-end">${{ $payment->due_amount }}</td>
+                                                            <td class="no-line text-end">€ {{ $payment->due_amount }}</td>
                                                         </tr>
 
                                                         <tr>
@@ -160,7 +159,7 @@
                                                             <td class="no-line text-center">
                                                                 <strong>{{ __('messages.GrandAmount') }}</strong>
                                                             </td>
-                                                            <td class="no-line text-end"><h4 class="m-0">${{ $payment->total_amount }}</h4></td>
+                                                            <td class="no-line text-end"><h4 class="m-0">€ {{ $payment->total_amount }}</h4></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -168,27 +167,27 @@
 
                                             <div class="row">
                                                 <div class="form-group col-md-3">
-                                                    <label> Paid Status </label>
+                                                    <label> {{ __('messages.PaidStatus') }} </label>
                                                     <select name="paid_status" id="paid_status" class="form-select">
-                                                        <option value="">Select Status </option>
-                                                        <option value="full_paid">Full Paid </option> 
-                                                        <option value="partial_paid">Partial Paid </option>
+                                                        <option value=""> Status </option>
+                                                        <option value="full_paid">{{ __('messages.FullPaid') }}</option>
+                                                        <option value="partial_paid">{{ __('messages.PartialPaid') }}</option>
                                                     </select>
-                                                    <input type="text" name="paid_amount" class="form-control paid_amount" placeholder="Enter Paid Amount" style="display:none;">
+                                                    <input type="text" name="paid_amount" class="form-control paid_amount" placeholder="{{ __('messages.PaidAmount') }}" style="display:none;">
                                                 </div>
 
                                                 <div class="form-group col-md-3">
                                                     <div class="md-3">
-                                                        <label for="example-text-input" class="form-label">Date</label>
+                                                        <label for="example-text-input" class="form-label">{{ __('messages.Date') }}</label>
                                                         <input class="form-control example-date-input" placeholder="YYYY-MM-DD"  name="date" type="date"  id="date">
                                                     </div>
                                                 </div>
 
                                                 <div class="form-group col-md-3">
                                                     <div class="md-3" style="padding-top: 30px;">
-                                                        <button type="submit" class="btn btn-info">Invoice Update</button>
-                                                    </div>                
-                                                </div>                                               
+                                                        <button type="submit" class="btn btn-info">{{ __('messages.Save') }}</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

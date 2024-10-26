@@ -73,14 +73,14 @@
                                                 {{--
                                                 <td>
                                                     @if ($item->status == 0)
-                                                    <span class="btn btn-warning">Pending</span> 
+                                                    <span class="btn btn-warning">{{ __('messages.Pending') }}</span> 
                                                     @elseif ($item->status == 1)
-                                                    <span class="btn btn-success">Approved</span>
+                                                    <span class="btn btn-success">{{ __('messages.Approved') }}</span>
                                                     @endif
                                                 </td>
                                                 --}}
                                                 <td>
-                                                    <a href="{{ route('invoice.pdf',$item->id) }}" class="btn btn-success sm" title="Print Invoice" >  <i class="fa fa-print"></i> &nbsp;Print </a>
+                                                    <a href="{{ route('invoice.pdf',$item->id) }}" class="btn btn-success sm" title="{{ __('messages.Print') }}" >  <i class="fa fa-print"></i> &nbsp;{{ __('messages.Print') }} </a>
                                                     {{--
                                                     <a href="{{ route('invoice.edit',$item->id) }}" class="btn btn-info sm" title="{{ __('messages.Edit') }}">
                                                         <i class="fas fa-edit"></i> {{ __('messages.Edit') }}

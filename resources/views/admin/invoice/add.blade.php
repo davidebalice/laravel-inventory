@@ -93,8 +93,8 @@
                                         <th style="width:24%">{{ __('messages.Category') }}</th>
                                         <th style="width:24%">{{ __('messages.Product') }}</th>
                                         <th style="width:12%">{{ __('messages.Quantity') }} / Kg</th>
-                                        <th style="width:12%">Unit price</th>
-                                        <th style="width:14%">Total price</th>
+                                        <th style="width:12%">{{ __('messages.UnitPrice') }}</th>
+                                        <th style="width:14%">{{ __('messages.TotalPrice') }}</th>
                                         <th style="width:14%">{{ __('messages.Manage') }}</th>
                                     </tr>
                                 </thead>
@@ -104,7 +104,7 @@
                                 <tbody>
                                     <tr>
                                         <td colspan="4" align="right">
-                                            Discount &nbsp;
+                                            {{ __('messages.Discount') }} &nbsp;
                                         </td>
                                         <td>
                                             <input type="number" name="discount_amount" id="discount_amount" value="0.00"  class="form-control discount_amount" placeholder="0.00" style="background-color:#ddd">
@@ -137,15 +137,15 @@
                             <div class="row">
                                 <div class="form-group col-md-3 mt-3">
                                     <label>
-                                        Paid status
+                                        {{ __('messages.PaidStatus') }}
                                     </label>
                                     <select name="paid_status" id="paid_status" class="form-select">
-                                        <option value="">Select status</option>
-                                        <option value="full_paid">Full paid</option>
-                                        <option value="full_due">Full due</option>
-                                        <option value="partial_paid">Partial paid</option>
+                                        <option value="">Status</option>
+                                        <option value="full_paid">{{ __('messages.FullPaid') }}</option>
+                                        <option value="full_due">{{ __('messages.FullDue') }}</option>
+                                        <option value="partial_paid">{{ __('messages.PartialPaid') }}</option>
                                     </select>
-                                    <input type="text" name="paid_amount" id="paid_amount" class="form-control paid_amount mt-3" style="display:none" placeholder="Enter paid amount">
+                                    <input type="text" name="paid_amount" id="paid_amount" class="form-control paid_amount mt-3" style="display:none" placeholder="{{ __('messages.PaidAmount') }}">
                                 </div>
 
                                 <div class="form-group col-md-3 mt-3">
@@ -159,7 +159,7 @@
                                         <option value="{{$item->id}}">{{$item->surname}} {{$item->name}}</option>
                                         @endforeach
                                     </select>
-                                    <input type="text" name="paid_amount" id="paid_amount" class="form-control paid_amount mt-3" style="display:none" placeholder="Enter paid amount">
+                                    <input type="text" name="paid_amount" id="paid_amount" class="form-control paid_amount mt-3" style="display:none" placeholder="{{ __('messages.PaidAmount') }}">
                                 </div>
                             </div>
 

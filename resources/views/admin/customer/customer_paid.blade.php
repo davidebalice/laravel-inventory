@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Paid customers</h4>
+                    <h4 class="mb-sm-0">{{ __('messages.PaidCustomers') }}</h4>
                 </div>
             </div>
         </div>
@@ -17,9 +17,15 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <a href="{{ route('paid.customer.print.pdf') }}" class="btn btn-dark btn-rounded waves-effect waves-light" target="_black" style="float:right;"><i class="fa fa-print"> Print Paid Customer </i></a> <br>  <br>               
+                        <a href="{{ route('paid.customer.print.pdf') }}" class="btn btn-dark btn-rounded waves-effect waves-light" target="_black" style="float:right;">
+                            <i class="fa fa-print">
+                                {{ __('messages.Print') }} {{ __('messages.PaidCustomers') }}
+                            </i>
+                        </a>
+                        
+                        <br><br>
 
-                        <h4 class="card-title">Paid data </h4>
+                        <h4 class="card-title">{{ __('messages.Date') }}</h4>
                     
                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>

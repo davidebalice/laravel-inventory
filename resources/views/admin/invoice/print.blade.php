@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Print Invoice</h4>
+                    <h4 class="mb-sm-0">{{ __('messages.Print') }}</h4>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
                                     <td>  {{ $item->description }} </td> 
                                     <td>  € {{ $item['payment']['total_amount'] }} </td>
                                     <td>
-                                        <a href="{{ route('invoice.pdf',$item->id) }}" class="btn btn-success sm" title="Print Invoice" >  <i class="fa fa-print"></i> &nbsp;Print </a>
+                                        <a href="{{ route('invoice.pdf',$item->id) }}" class="btn btn-success sm" title="{{ __('messages.Print') }}" >  <i class="fa fa-print"></i> &nbsp;{{ __('messages.Print') }} </a>
                                     </td>
                                 </tr>
                             @endforeach

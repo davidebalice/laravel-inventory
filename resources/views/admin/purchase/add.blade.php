@@ -91,9 +91,9 @@
                                         <th style="width:18%">{{ __('messages.Category') }}</th>
                                         <th style="width:18%">{{ __('messages.Product') }}</th>
                                         <th style="width:10%">{{ __('messages.Quantity') }} / Kg</th>
-                                        <th style="width:10%">Unit price</th>
+                                        <th style="width:10%">{{ __('messages.UnitPrice') }}</th>
                                         <th style="width:18%">{{ __('messages.Description') }}</th>
-                                        <th style="width:12%">Total price</th>
+                                        <th style="width:12%">{{ __('messages.TotalPrice') }}</th>
                                         <th style="width:14%">{{ __('messages.Manage') }}</th>
                                     </tr>
                                 </thead>

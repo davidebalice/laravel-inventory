@@ -3903,3 +3903,11 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
 .red {
     color: #ff0000;
 }
+
+.githubContainer {
+    margin-top: 20px;
+}
+.profile{
+    display: flex !important;
+    align-items: center !important;
+}

@@ -1,7 +1,6 @@
 <header id="page-topbar">
     <div class="navbar-header">
         <div class="d-flex">
-            <!-- LOGO -->
             <div class="navbar-brand-box">
                 <a href="/dashboard" class="logo logo-dark">
                     <span class="logo-sm">
@@ -66,14 +65,13 @@
             @endphp
 
             <div class="dropdown d-inline-block user-dropdown">
-                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   
+                <button type="button" class="btn header-item waves-effect profile" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="rounded-circle overflow-hidden d-xl-inline-block header-img-top">
-                        <img class="h-100 w-auto justify-content-center" src="{{ (!empty($data->profile_image)) ? url('upload/admin/'.$data->profile_image) : url('upload/no_image.jpg') }}" alt="profile">                                   
+                        <img class="h-100 w-auto justify-content-center" src="{{ (!empty($data->profile_image)) ? url('upload/admin/'.$data->profile_image) : url('upload/no_image.jpg') }}" alt="profile">
                     </div>
-                    <div class="d-xl-inline-block" style="verical-align:middle;margin-top:-10px">
+                    <div class="d-xl-inline-block" style="verical-align:middle;">
                         <span class="d-none d-xl-inline-block ms-2">
-                            {{ $data->name }}
+                            {{ $data->name }}  {{ $data->surname }}
                         </span>
                         <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                     </div>
@@ -89,6 +87,12 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger" href="{{ route('admin.logout')}}"><i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
                 </div>
+            </div>
+
+            <div class="d-inline-block githubContainer">
+                <a href="https://github.com/davidebalice/laravel-inventory" target="_blank">
+                    <img src="{{ asset('backend/assets/images/github.png') }}" height="28">
+                </a>
             </div>
         </div>
     </div>
