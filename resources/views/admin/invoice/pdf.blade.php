@@ -25,7 +25,7 @@
                             <div class="col-12">
                                 <div class="invoice-title">
                                     <h3>
-                                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo" height="24"/> Shopping Demo
+                                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo" height="24"/> {{ env('COMPANY_NAME', 'Company Name') }}
                                     </h3>
                                 </div>
                                 <hr>

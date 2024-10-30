@@ -31,7 +31,7 @@
                                 <div class="invoice-title">
                                     <h4 class="float-end font-size-16"><strong>{{ __('messages.Invoice') }} n. # {{ $invoice->invoice_no }}</strong></h4>
                                     <h3>
-                                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo" height="24"/> Shopping Demo
+                                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo" height="24"/> {{ env('COMPANY_NAME', 'Company Name') }}
                                     </h3>
                                 </div>
                                 <hr>
@@ -39,14 +39,13 @@
                                 <div class="row">
                                     <div class="col-6 mt-4">
                                         <address>
-                                            <strong>Shopping Demo:</strong><br>
-                                            support@companyname.com
+                                            <strong>{{ env('COMPANY_NAME', 'Company Name') }}:</strong><br>
+                                            {{ env('COMPANY_EMAIL', 'info@companyname.com') }}
                                         </address>
                                     </div>
                                     <div class="col-6 mt-4 text-end">
                                         <address>
-                                            <strong>{{ __('messages.Date') }}:</strong><br>
-                                            {{ date('d-m-Y',strtotime($invoice->date)) }} <br><br>
+                                            {{ env('COMPANY_ADDRESS', '123 5th Ave, New York, NY 10001') }}
                                         </address>
                                     </div>
                                 </div>
@@ -55,7 +54,7 @@
 
                         @php
                         $payment = App\Models\Payment::where('invoice_id',$invoice->id)->first();
-                        @endphp   
+                        @endphp
 
                         <div class="row">
                             <div class="col-12">

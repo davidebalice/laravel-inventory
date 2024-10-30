@@ -38,12 +38,12 @@
                                     {{ __('messages.Supplier') }}
                                 </label>
                                 <select class="form-select select2" name="supplier_id" id="supplier_id" >
-                                    <option value=""> - Supplier - </option>
+                                    <option value=""> - {{ __('messages.Supplier') }} - </option>
                                     @foreach ($suppliers as $item)
                                     <option value="{{$item->id}}" {{ $item->id == old('supplier_id') ? 'selected' : ''}} >{{$item->name}}</option>
                                     @endforeach
                                 </select>
-                            </div>  
+                            </div>
 
                             <div class="col-md-4 col-lg-3">
                                 <label for="category_id" class="col-form-label">
@@ -53,21 +53,20 @@
                                     <option value=""> - {{ __('messages.Category') }} - </option>
                                     
                                 </select>
-                            </div>  
+                            </div>
 
-                            <div class="col-md-4 col-lg-3">  
+                            <div class="col-md-4 col-lg-3">
                                 <label for="product_id" class="col-form-label">
                                     {{ __('messages.Product') }}
                                 </label>
                                 <select class="form-select select2" name="product_id" id="product_id" >
-                                    <option value=""> - {{ __('messages.Category') }} - </option>
+                                    <option value=""> - {{ __('messages.Product') }} - </option>
                                     
                                 </select>
-                            </div>  
+                            </div>
 
-                            <div class="col-md-4 col-lg-3">  
+                            <div class="col-md-4 col-lg-3">
                                 {{--
-                                
                                 <input class="btn btn-dark  waves-effect waves-light mb-3 primary_bg" type="submit" id="purchase_no" value=" Add " > 
                                 --}}
                                 <label for="product_id" class="col-form-label" style="margin-top:45px">

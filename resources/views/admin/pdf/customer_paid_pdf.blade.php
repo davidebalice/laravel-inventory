@@ -27,7 +27,7 @@
                             <div class="col-12">
                                 <div class="invoice-title">
                                     <h3>
-                                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo" height="24"/> Shopping Demo
+                                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo" height="24"/> {{ env('COMPANY_NAME', 'Company Name') }}
                                     </h3>
                                 </div>
 
@@ -37,13 +37,13 @@
                                 <div class="row">
                                     <div class="col-6 mt-4">
                                         <address>
-                                            <strong>Shopping Demo:</strong><br>
-                                            support@companyname.com
+                                            <strong>{{ env('COMPANY_NAME', 'Company Name') }}:</strong><br>
+                                            {{ env('COMPANY_EMAIL', 'info@companyname.com') }}
                                         </address>
                                     </div>
                                     <div class="col-6 mt-4 text-end">
                                         <address>
-                                        
+                                            {{ env('COMPANY_ADDRESS', '123 5th Ave, New York, NY 10001') }}
                                         </address>
                                     </div>
                                 </div>
