@@ -5,16 +5,10 @@
         <title>Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Login" name="description" />
-        <!-- App favicon -->
         <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.ico') }}">
-
-        <!-- Bootstrap Css -->
         <link href="{{ asset('backend/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
-        <!-- Icons Css -->
         <link href="{{ asset('backend/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
-        <!-- App Css-->
         <link href="{{ asset('backend/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
-        <!-- Toaster Css-->
         <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/toastr.css?d=2') }}" >
     </head>
 
@@ -24,7 +18,6 @@
             <div class="container-fluid p-0">
                 <div class="card">
                     <div class="card-body">
-
                         <div class="text-center mt-4 mb-4">
                             <div class="mb-3">
                                 <a href="index.html" class="auth-logo">
@@ -36,16 +29,11 @@
                         <h4 class="text-muted text-center font-size-18"><b>Laravel Inventory</b></h4>
     
                         <div class="p-3">
-                            
-
-
-                            <!-- Session Status -->
                             <x-auth-session-status class="mb-4" :status="session('status')" />
 
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
 
-                                <!-- Email Address  -->
                                 <div>
                                     <x-input-label for="email" :value="__('Email')" />
 
@@ -86,33 +74,35 @@
                                 </div>
 
                                 <div class="flex items-center justify-end mt-4">
-                                    @if (Route::has('password.request'))
-                                        <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                                            {{ __('Forgot your password?') }}
-                                        </a>
-                                    @endif
+                                    @php
+                                        /*
+                                        @if (Route::has('password.request'))
+                                            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                                                {{ __('Forgot your password?') }}
+                                            </a>
+                                        @endif
+                                        */
+                                    @endphp
+                                  
 
                                     <x-primary-button class="ml-3">
                                         {{ __('Log in') }}
                                     </x-primary-button>
                                 </div>
                             </form>
-
-
-
-
+                            <div>
+                                <b>Demo data:</b>
+                                <br />
+                                Email: mario@rossi.it
+                                <br />
+                                Password: 12345678
+                            </div>
                         </div>
-                        <!-- end -->
                     </div>
-                    <!-- end cardbody -->
                 </div>
-                <!-- end card -->
             </div>
-            <!-- end container -->
         </div>
-        <!-- end -->
 
-        <!-- JAVASCRIPT -->
         <script src="{{ asset('backend/assets/libs/jquery/jquery.min.js') }}"></script>
         <script src="{{ asset('backend/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('backend/assets/libs/metismenu/metisMenu.min.js') }}"></script>

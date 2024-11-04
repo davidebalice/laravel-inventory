@@ -27,9 +27,11 @@ Route::middleware(['auth'])->group(function (){
         Route::get('/admin/logout', 'destroy')->name('admin.logout');
         Route::get('/admin/profile', 'Profile')->name('admin.profile');
         Route::get('/edit/profile', 'EditProfile')->name('edit.profile');
-        Route::post('/store/profile', 'StoreProfile')->name('store.profile');
         Route::get('/change/password', 'ChangePassword')->name('change.password');
-        Route::post('/update/password', 'UpdatePassword')->name('update.password');
+        Route::group(['middleware' => ['demo_mode']], function () {
+            Route::post('/store/profile', 'StoreProfile')->name('store.profile');
+            Route::post('/update/password', 'UpdatePassword')->name('update.password');
+        });
     });
 
     Route::controller(SupplierController::class)->group(function(){
@@ -38,82 +40,94 @@ Route::middleware(['auth'])->group(function (){
         Route::get('/supplier/edit/{id}', 'Edit')->name('supplier.edit');
         Route::group(['middleware' => ['demo_mode']], function () {
             Route::post('/supplier/store', 'Store')->name('supplier.store');
-            Route::post('/supplier/update', 'Update')->name('supplier.update'); 
-            Route::get('/supplier/delete/{id}', 'Delete')->name('supplier.delete');  
+            Route::post('/supplier/update', 'Update')->name('supplier.update');
+            Route::get('/supplier/delete/{id}', 'Delete')->name('supplier.delete');
         });
     });
 
     Route::controller(CustomerController::class)->group(function(){
         Route::get('/customers', 'Customer')->name('customers');
         Route::get('/customer/add', 'Add')->name('customer.add');
-        Route::post('/customer/store', 'Store')->name('customer.store');
-        Route::get('/customer/edit/{id}', 'Edit')->name('customer.edit');   
-        Route::get('/customer/delete/{id}', 'Delete')->name('customer.delete');  
-        Route::post('/customer/update', 'Update')->name('customer.update'); 
+        Route::get('/customer/edit/{id}', 'Edit')->name('customer.edit');
         Route::get('/credit/customer', 'CreditCustomer')->name('credit.customer');
         Route::get('/credit/customer/print/pdf', 'CreditCustomerPrintPdf')->name('credit.customer.print.pdf');
         Route::get('/customer/edit/invoice/{invoice_id}', 'CustomerEditInvoice')->name('customer.edit.invoice');
-        Route::post('/customer/update/invoice/{invoice_id}', 'CustomerUpdateInvoice')->name('customer.update.invoice');
         Route::get('/customer/invoice/details/{invoice_id}', 'CustomerInvoiceDetails')->name('customer.invoice.details.pdf');
         Route::get('/paid/customer', 'PaidCustomer')->name('paid.customer');
         Route::get('/paid/customer/print/pdf', 'PaidCustomerPrintPdf')->name('paid.customer.print.pdf');
         Route::get('/customer/wise/report', 'CustomerWiseReport')->name('customer.wise.report');
         Route::get('/customer/wise/credit/report', 'CustomerWiseCreditReport')->name('customer.wise.credit.report');
         Route::get('/customer/wise/paid/report', 'CustomerWisePaidReport')->name('customer.wise.paid.report');
+        Route::group(['middleware' => ['demo_mode']], function () {
+            Route::get('/customer/delete/{id}', 'Delete')->name('customer.delete');
+            Route::post('/customer/store', 'Store')->name('customer.store');
+            Route::post('/customer/update', 'Update')->name('customer.update');
+            Route::post('/customer/update/invoice/{invoice_id}', 'CustomerUpdateInvoice')->name('customer.update.invoice');
+        });
     });
 
     Route::controller(UnitController::class)->group(function(){
         Route::get('/units', 'Unit')->name('units');
         Route::get('/unit/add', 'Add')->name('unit.add');
-        Route::post('/unit/store', 'Store')->name('unit.store');
-        Route::get('/unit/edit/{id}', 'Edit')->name('unit.edit');   
-        Route::get('/unit/delete/{id}', 'Delete')->name('unit.delete');  
-        Route::post('/unit/update', 'Update')->name('unit.update'); 
+        Route::get('/unit/edit/{id}', 'Edit')->name('unit.edit');
+        Route::group(['middleware' => ['demo_mode']], function () {
+            Route::get('/unit/delete/{id}', 'Delete')->name('unit.delete');
+            Route::post('/unit/store', 'Store')->name('unit.store');
+            Route::post('/unit/update', 'Update')->name('unit.update');
+        });
     });
 
     Route::controller(CategoryController::class)->group(function(){
         Route::get('/categories', 'Category')->name('categories');
         Route::get('/category/add', 'Add')->name('category.add');
-        Route::post('/category/store', 'Store')->name('category.store');
-        Route::get('/category/edit/{id}', 'Edit')->name('category.edit');   
-        Route::get('/category/delete/{id}', 'Delete')->name('category.delete');  
-        Route::post('/category/update', 'Update')->name('category.update'); 
+        Route::get('/category/edit/{id}', 'Edit')->name('category.edit');
+        Route::group(['middleware' => ['demo_mode']], function () {
+            Route::get('/category/delete/{id}', 'Delete')->name('category.delete');
+            Route::post('/category/store', 'Store')->name('category.store');
+            Route::post('/category/update', 'Update')->name('category.update');
+        });
     });
 
     Route::controller(ProductController::class)->group(function(){
         Route::get('/products', 'Product')->name('products');
         Route::get('/product/add', 'Add')->name('product.add');
-        Route::post('/product/store', 'Store')->name('product.store');
-        Route::get('/product/edit/{id}', 'Edit')->name('product.edit');   
-        Route::get('/product/delete/{id}', 'Delete')->name('product.delete');  
-        Route::post('/product/update', 'Update')->name('product.update'); 
+        Route::get('/product/edit/{id}', 'Edit')->name('product.edit');
+        Route::group(['middleware' => ['demo_mode']], function () {
+            Route::get('/product/delete/{id}', 'Delete')->name('product.delete');
+            Route::post('/product/store', 'Store')->name('product.store');
+            Route::post('/product/update', 'Update')->name('product.update');
+        });
     });
 
     Route::controller(PurchaseController::class)->group(function(){
         Route::get('/purchase', 'Purchases')->name('purchases');
         Route::get('/purchase/add', 'Add')->name('purchase.add');
-        Route::post('/purchase/store', 'Store')->name('purchase.store');
-        Route::get('/purchase/edit/{id}', 'Edit')->name('purchase.edit');   
-        Route::get('/purchase/delete/{id}', 'Delete')->name('purchase.delete');  
-        Route::get('/purchase/approve/{id}', 'Approve')->name('purchase.approve'); 
+        Route::get('/purchase/edit/{id}', 'Edit')->name('purchase.edit');
+        Route::get('/purchase/approve/{id}', 'Approve')->name('purchase.approve');
         Route::get('/purchase/pending', 'Pending')->name('purchase.pending');
-        Route::post('/purchase/update', 'Update')->name('purchase.update'); 
         Route::get('/daily/purchase/report', 'DailyPurchaseReport')->name('daily.purchase.report');
         Route::get('/daily/purchase/pdf', 'DailyPurchasePdf')->name('daily.purchase.pdf');
+        Route::group(['middleware' => ['demo_mode']], function () {
+            Route::get('/purchase/delete/{id}', 'Delete')->name('purchase.delete');
+            Route::post('/purchase/store', 'Store')->name('purchase.store');
+            Route::post('/purchase/update', 'Update')->name('purchase.update');
+        });
     });
 
     Route::controller(InvoiceController::class)->group(function(){
         Route::get('/invoices', 'Invoices')->name('invoices');
         Route::get('/invoice/add', 'Add')->name('invoice.add');
-        Route::post('/invoice/store', 'Store')->name('invoice.store');
-        Route::get('/invoice/delete/{id}', 'Delete')->name('invoice.delete');  
         Route::get('/invoice/pending', 'Pending')->name('invoice.pending');
-        Route::get('/invoice/approve/{id}', 'Approve')->name('invoice.approve');  
-        Route::post('/approve/store/{id}', 'ApproveStore')->name('approval.store'); 
-        Route::get('/invoice/print', 'Print')->name('invoice.print');  
+        Route::get('/invoice/approve/{id}', 'Approve')->name('invoice.approve');
+        Route::get('/invoice/print', 'Print')->name('invoice.print');
         Route::get('/invoice/print/{id}', 'Pdf')->name('invoice.pdf');
         Route::get('/invoice/daily/report', 'DailyReport')->name('invoice.daily');
         Route::get('/invoice/daily/pdf', 'DailyInvoicePdf')->name('daily.invoice.pdf');
+        Route::group(['middleware' => ['demo_mode']], function () {
+            Route::get('/invoice/delete/{id}', 'Delete')->name('invoice.delete');
+            Route::post('/invoice/store', 'Store')->name('invoice.store');
+            Route::post('/approve/store/{id}', 'ApproveStore')->name('approval.store');
+        });
     });
     
     Route::controller(DefaultController::class)->group(function(){
